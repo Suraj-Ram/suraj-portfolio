@@ -1,8 +1,16 @@
+import Header from "./components/Header";
+import Bio from "./components/Bio";
+import Projects from "./components/Projects";
+
 function App() {
   return (
-    <div className="text-center text-4xl text-blue-500 font-semibold">
-      Hello Tailwind!
-    </div>
+    <>
+      <Header />
+      <div className="container mx-auto px-4 py-2">
+        <Bio />
+        <Projects />
+      </div>
+    </>
   );
 }
 
