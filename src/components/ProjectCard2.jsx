@@ -10,7 +10,6 @@ const ProjectCard = ({ title, description, stack, links }) => {
         <h4 className="text-xl font-bold mb-3 py-1">{title}</h4>
         <p className=" text-gray-700 text-base">{description}</p>
         {stack}
-        {links}
         <div className="flex justify-center gap-x-4">
           <a
             href="https://mnist.surajram.xyz"

@@ -3,6 +3,8 @@ import { SiTensorflow } from "react-icons/si";
 import { FaPython } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
 
+// OLD - DONT USE
+
 const TechItem = ({ children, logo, color }) => {
   return (
     <li className="flex items-center">

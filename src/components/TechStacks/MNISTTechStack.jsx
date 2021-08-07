@@ -1,4 +1,3 @@
-import TechStack from "../TechStack";
 import TechItem from "./TechItem";
 import TechStackBase from "./TechStackBase";
 import { FaJs } from "react-icons/fa";
