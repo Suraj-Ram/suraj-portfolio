@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard2";
-import TechStack from "./TechStack";
-import MNISTTechStack from "./TechStacks/MNISTTechStack";
+import MNISTProject from "./Projects/MNISTProject";
+
+//SOON TO BE THE PROJECT COMPONENT JUST FOR MNIST
 
 const Projects = () => {
   return (
@@ -10,14 +11,9 @@ const Projects = () => {
       </h2>
       <div className="md:flex gap-5 justify-center  my-1">
         <ProjectCard />
-        <ProjectCard
-          title="MNIST Web Serve"
-          description="Multiple Python Keras models, trained on the MNIST dataset, served on a interactive webpage through the use of Tensorflow JS for loading and getting predictions from the model and p5.js for canvas operations."
-          stack={<MNISTTechStack />}
-        />
+        <MNISTProject />
         {/* <ProjectCard stack={<MNISTTechStack />} /> */}
-        <ProjectCard />
-        <MNISTTechStack></MNISTTechStack>
+        {/* <ProjectCard /> */}
       </div>
     </div>
   );
