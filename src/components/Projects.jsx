@@ -1,4 +1,5 @@
 import MNISTProject from "./Projects/MNISTProject"
+import TaskTabProject from "./Projects/TaskTabProject"
 
 const Projects = () => {
   return (
@@ -8,6 +9,7 @@ const Projects = () => {
       </h2>
       <div className="md:flex flex-wrap gap-5 justify-center my-1 ">
         <MNISTProject />
+        <TaskTabProject />
         <MNISTProject />
         <MNISTProject />
 

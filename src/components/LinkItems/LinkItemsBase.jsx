@@ -23,7 +23,7 @@ const LinkItemsBase = ({ links }) => {
           href={el.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex justify-center items-center text-cyan-500"
+          className="flex justify-center items-center text-cyan-500 text-lg"
         >
           {el.logo}
         </a>
