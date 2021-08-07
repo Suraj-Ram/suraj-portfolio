@@ -1,5 +1,6 @@
 import MNISTProject from "./Projects/MNISTProject"
 import TaskTabProject from "./Projects/TaskTabProject"
+import TWAProject from "./Projects/TWAProject"
 
 const Projects = () => {
   return (
@@ -8,10 +9,9 @@ const Projects = () => {
         Projects
       </h2>
       <div className="md:flex flex-wrap gap-5 justify-center my-1 ">
+        <TWAProject />
         <MNISTProject />
         <TaskTabProject />
-        <MNISTProject />
-        <MNISTProject />
 
         {/* <ProjectCard stack={<MNISTTechStack />} /> */}
         {/* <ProjectCard /> */}
