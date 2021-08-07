@@ -1,4 +1,4 @@
-import ProjectCard from "./ProjectCard2";
+import ProjectCard from "./ProjectCard";
 import MNISTProject from "./Projects/MNISTProject";
 
 //SOON TO BE THE PROJECT COMPONENT JUST FOR MNIST

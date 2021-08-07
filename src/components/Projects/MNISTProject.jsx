@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCard from "../ProjectCard2";
+import ProjectCard from "../ProjectCard";
 import MNISTTechStack from "../TechStacks/MNISTTechStack";
 import MNISTLinkItems from "../LinkItems/MNISTLinkItems";
 
