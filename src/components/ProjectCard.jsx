@@ -1,8 +1,10 @@
 import { FaTools } from "react-icons/fa"
 
+//old gradient from-cyan-400 to-green-500
+
 const ProjectCard = ({ title, description, stack, links, date, wip }) => {
   return (
-    <div className="max-w-sm xl:max-w-md p-1 bg-gradient-to-tr from-cyan-400 to-green-500 mx-auto rounded-xl flex flex-col gap-2 mb-2 hover:shadow-lg  ">
+    <div className="max-w-sm xl:max-w-md p-1 bg-gradient-to-tr from-green-400 to-blue-500 mx-auto rounded-xl flex flex-col gap-2 mb-2 hover:shadow-lg  ">
       <div className="bg-white p-2 xl:p-3 rounded-xl w-full h-full">
         {/* bg-gradient-to-r from-cyan-400 to-sky-500 */}
         <h4 className="text-xl font-bold py-1">{title}</h4>

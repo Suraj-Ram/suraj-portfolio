@@ -1,5 +1,5 @@
 import { GoMarkGithub } from "react-icons/go"
-import { FaExternalLinkAlt, FaLinkedin } from "react-icons/fa"
+import { FaLinkedin } from "react-icons/fa"
 
 const Contact = () => {
   return (
