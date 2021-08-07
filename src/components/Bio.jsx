@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"
 
 const Bio = () => {
   return (
     <div className="mb-16">
       <h1
-        className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white"
+        className="font-bold text-3xl md:text-5xl md:pt-4 tracking-tight mb-4 text-black dark:text-white"
         id="title"
       >
         Hey, I'm Suraj
@@ -15,7 +15,7 @@ const Bio = () => {
         sapiente modi dolor est fuga dolore magni ea tempora quam. me.
       </h1>
     </div>
-  );
-};
+  )
+}
 
-export default Bio;
+export default Bio

@@ -1,7 +1,4 @@
-import ProjectCard from "./ProjectCard";
-import MNISTProject from "./Projects/MNISTProject";
-
-//SOON TO BE THE PROJECT COMPONENT JUST FOR MNIST
+import MNISTProject from "./Projects/MNISTProject"
 
 const Projects = () => {
   return (
@@ -9,14 +6,16 @@ const Projects = () => {
       <h2 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 text-black dark:text-white">
         Projects
       </h2>
-      <div className="md:flex gap-5 justify-center  my-1">
-        <ProjectCard />
+      <div className="md:flex flex-wrap gap-5 justify-center my-1 ">
         <MNISTProject />
+        <MNISTProject />
+        <MNISTProject />
+
         {/* <ProjectCard stack={<MNISTTechStack />} /> */}
         {/* <ProjectCard /> */}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects
