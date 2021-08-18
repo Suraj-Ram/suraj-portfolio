@@ -9,7 +9,7 @@ const ShortifyTechStack = () => {
       <TechItem logo={<FaJs />} color="#f7df1e">
         Javascript
       </TechItem>
-      <TechItem>Express</TechItem>
+      <TechItem logo="&nbsp; &nbsp;">Express</TechItem>
       <TechItem logo={<SiFirebase />} color="#FFCA28">
         Firebase (Functions, Firestore & Hosting)
       </TechItem>
