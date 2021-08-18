@@ -1,4 +1,5 @@
 import MNISTProject from "./Projects/MNISTProject"
+import ShortifyProject from "./Projects/ShortifyProject"
 import TaskTabProject from "./Projects/TaskTabProject"
 import TWAProject from "./Projects/TWAProject"
 
@@ -12,6 +13,7 @@ const Projects = () => {
         <TWAProject />
         <MNISTProject />
         <TaskTabProject />
+        <ShortifyProject />
 
         {/* <ProjectCard stack={<MNISTTechStack />} /> */}
         {/* <ProjectCard /> */}

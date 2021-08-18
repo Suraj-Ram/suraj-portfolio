@@ -1,12 +1,12 @@
-import React from "react";
+import React from "react"
 
 const TechItem = ({ logo, color, children }) => {
   return (
-    <li className="flex items-center">
+    <li className="flex items-center text-gray-700">
       <span style={{ color, margin: "0", padding: "0" }}> {logo} </span>
       <span className="ml-1"> {children} </span>
     </li>
-  );
-};
+  )
+}
 
-export default TechItem;
+export default TechItem
