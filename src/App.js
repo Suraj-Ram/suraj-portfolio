@@ -1,7 +1,8 @@
-import Header from "./components/Header"
-import Bio from "./components/Bio"
-import Projects from "./components/Projects"
-import Contact from "./components/Contact"
+import Header from "./components/Header";
+import Bio from "./components/Bio";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
         <Projects />
         <Contact />
       </div>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

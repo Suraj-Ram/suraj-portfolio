@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const Bio = () => {
   return (
@@ -16,7 +16,7 @@ const Bio = () => {
         paradigm shift it brings to problem solving.
       </h1>
     </div>
-  )
-}
+  );
+};
 
-export default Bio
+export default Bio;
