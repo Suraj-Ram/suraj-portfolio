@@ -1,5 +1,5 @@
-import { GoMarkGithub } from "react-icons/go"
-import { FaLinkedin } from "react-icons/fa"
+import { GoMarkGithub } from "react-icons/go";
+import { FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -7,7 +7,7 @@ const Contact = () => {
       <h2 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-4 text-black dark:text-white">
         Contact
       </h2>
-      <div className="text-base md:text-xl">
+      <div className="text-base sm:text-lg md:text-xl">
         <a
           href="https://github.com/Suraj-Ram"
           target="_blank"
@@ -34,7 +34,7 @@ const Contact = () => {
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
