@@ -1,5 +1,7 @@
 # My Portfolio
 
-### _[surajram.xyz](https://www.surajram.xyz)_
+### [surajram.xyz](https://www.surajram.xyz)
 
-A portfolio created with React and Tailwind CSS to showcase personal software projects projects
+A portfolio created with React and Tailwind CSS to showcase personal software projects.
+
+Hosted on Vercel ▲
