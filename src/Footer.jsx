@@ -4,7 +4,7 @@ import { SiTailwindcss } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 flex flex-col justify-center items-center text-sm text-gray-600 h-24">
+    <footer className="bg-gray-100 flex flex-col justify-center items-center text-sm text-gray-600 h-24 lg:h-12 2xl:h-24">
       <p className="flex justify-center items-center">
         Made with React &nbsp; <FaReact color="#60DAFB" /> &nbsp; + Tailwind
         &nbsp;
