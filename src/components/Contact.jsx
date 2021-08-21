@@ -3,7 +3,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div>
+    <div id="contact">
       <h2 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-4 text-black dark:text-white">
         Contact
       </h2>

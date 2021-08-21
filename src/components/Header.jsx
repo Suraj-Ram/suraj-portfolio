@@ -12,7 +12,7 @@ const Header = () => {
     },
     {
       name: "Contact",
-      link: "#",
+      link: "#contact",
     },
   ];
 

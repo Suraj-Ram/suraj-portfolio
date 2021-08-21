@@ -5,7 +5,7 @@ import TWAProject from "./Projects/TWAProject";
 
 const Projects = () => {
   return (
-    <div>
+    <div id="projects">
       <h2 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 text-black dark:text-white">
         Projects
       </h2>
