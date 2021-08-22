@@ -1,23 +1,15 @@
-import TechItem from "./TechItem"
-import TechStackBase from "./TechStackBase"
-import { FaHtml5, FaJs } from "react-icons/fa"
-import { SiFirebase } from "react-icons/si"
+import TechStackBase from "./TechStackBase";
+import { TIJavsscript, TIExpress, TIFirebase3, TIHTML } from "./AllTechItems";
 
 const ShortifyTechStack = () => {
   return (
     <TechStackBase>
-      <TechItem logo={<FaJs />} color="#f7df1e">
-        Javascript
-      </TechItem>
-      <TechItem logo="&nbsp; &nbsp;">Express</TechItem>
-      <TechItem logo={<SiFirebase />} color="#FFCA28">
-        Firebase (Functions, Firestore & Hosting)
-      </TechItem>
-      <TechItem logo={<FaHtml5 />} color="#e34c26">
-        HTML
-      </TechItem>
+      <TIJavsscript />
+      <TIExpress />
+      <TIFirebase3 />
+      <TIHTML />
     </TechStackBase>
-  )
-}
+  );
+};
 
-export default ShortifyTechStack
+export default ShortifyTechStack;
