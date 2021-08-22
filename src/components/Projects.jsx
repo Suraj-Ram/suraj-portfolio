@@ -14,9 +14,6 @@ const Projects = () => {
         <MNISTProject />
         <TaskTabProject />
         <ShortifyProject />
-
-        {/* <ProjectCard stack={<MNISTTechStack />} /> */}
-        {/* <ProjectCard /> */}
       </div>
     </div>
   );

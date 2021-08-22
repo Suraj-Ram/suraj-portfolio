@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Bio from "./components/Bio";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (

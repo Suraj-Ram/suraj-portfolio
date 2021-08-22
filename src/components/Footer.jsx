@@ -10,7 +10,7 @@ const Footer = () => {
         &nbsp;
         <SiTailwindcss color="#07B6D4" />
       </p>
-      <p className="text-xs">&copy; Suraj Ramchandran, 2021</p>
+      <p className="text-xs pt-1">&copy; Suraj Ramchandran, 2021</p>
     </footer>
   );
 };
