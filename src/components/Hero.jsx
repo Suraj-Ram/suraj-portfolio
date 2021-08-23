@@ -24,7 +24,7 @@ const Hero = () => {
                 and websites using HTML, CSS, Vanilla JS, React, Bootstrap and
                 Tailwind. I am fascinated particularly fascinated by AI and
                 machine learning and the paradigm shift it brings to problem
-                solving. Window width: {windowWidth}
+                solving.
               </p>
             </section>
             <section className="lg:mx-auto invisible md:visible">
