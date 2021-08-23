@@ -4,8 +4,8 @@ const Hero = () => {
     <div className=" bg-gradient-to-b from-gray-300 to-white">
       <div className="container mx-auto px-4 py-2">
         <div className="mb-16">
-          <div className="flex justify-between items-center">
-            <section className="flex-shrink-0">
+          <div className="flex justify-between items-center lg:justify-start lg:gap-4">
+            <section className="">
               <h1
                 className="font-bold text-3xl md:text-5xl xl:text-6xl md:pt-4 xl:pt-8 tracking-tight mb-4 lg:mb-8 text-black dark:text-white"
                 id="title"
@@ -20,7 +20,7 @@ const Hero = () => {
                 solving.
               </p>
             </section>
-            <section className="">
+            <section className="lg:mx-auto">
               <svg
                 fill="#9CA3AF"
                 // use "#111827" for dark mode
