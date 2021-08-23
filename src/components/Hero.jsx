@@ -1,11 +1,13 @@
 //import Bio from "./Bio";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Blob from "./Blob";
 
 const Hero = () => {
   const [windowWidth, setwindowWidth] = useState(window.innerWidth);
 
   window.addEventListener("resize", () => setwindowWidth(window.innerWidth));
+
+  const blobIdx = Math.floor(Math.random() * 4);
 
   return (
     <div className=" bg-gradient-to-b from-gray-300 to-white">
@@ -28,7 +30,7 @@ const Hero = () => {
               </p>
             </section>
             <section className="lg:mx-auto invisible md:visible">
-              {windowWidth > 768 ? <Blob color="#9CA3AF" /> : " "}
+              {windowWidth > 768 ? <Blob idx="3" color="#9CA3AF" /> : " "}
             </section>
           </div>
         </div>
