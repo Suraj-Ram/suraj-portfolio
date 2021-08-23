@@ -1,7 +1,12 @@
 //import Bio from "./Bio";
+import { useState, useEffect } from "react";
 import Blob from "./Blob";
 
 const Hero = () => {
+  const [windowWidth, setwindowWidth] = useState(window.innerWidth);
+
+  window.addEventListener("resize", () => setwindowWidth(window.innerWidth));
+
   return (
     <div className=" bg-gradient-to-b from-gray-300 to-white">
       <div className="container mx-auto px-4 py-2">
@@ -19,11 +24,11 @@ const Hero = () => {
                 and websites using HTML, CSS, Vanilla JS, React, Bootstrap and
                 Tailwind. I am fascinated particularly fascinated by AI and
                 machine learning and the paradigm shift it brings to problem
-                solving.
+                solving. Window width: {windowWidth}
               </p>
             </section>
-            <section className="lg:mx-auto">
-              <Blob color="#9CA3AF" />
+            <section className="lg:mx-auto invisible md:visible">
+              {windowWidth > 768 ? <Blob color="#9CA3AF" /> : " "}
             </section>
           </div>
         </div>

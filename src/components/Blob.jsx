@@ -73,7 +73,6 @@ const Blob = ({ color = "#9CA3AF" }) => {
   const blobArr = [blob1, blob2, blob3, blob4];
   const idx = Math.floor(Math.random() * blobArr.length);
   const randomBlob = blobArr[idx];
-
   return React.createElement(randomBlob, { color }, null);
 };
 
