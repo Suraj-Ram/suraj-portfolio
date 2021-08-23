@@ -7,8 +7,6 @@ const Hero = () => {
 
   window.addEventListener("resize", () => setwindowWidth(window.innerWidth));
 
-  const blobIdx = Math.floor(Math.random() * 4);
-
   return (
     <div className=" bg-gradient-to-b from-gray-300 to-white">
       <div className="container mx-auto px-4 py-2">
