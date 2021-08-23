@@ -5,11 +5,18 @@ import { SiTailwindcss } from "react-icons/si";
 const Footer = () => {
   return (
     <footer className="bg-gray-100 flex flex-col justify-center items-center text-sm text-gray-600 h-24 lg:h-12 2xl:h-24">
-      <p className="flex justify-center items-center">
-        Made with React &nbsp; <FaReact color="#60DAFB" /> &nbsp; + Tailwind
-        &nbsp;
-        <SiTailwindcss color="#07B6D4" />
-      </p>
+      <a
+        href="https://github.com/Suraj-Ram/suraj-portfolio"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline"
+      >
+        <p className="flex justify-center items-center">
+          Made with React &nbsp; <FaReact color="#60DAFB" /> &nbsp; + Tailwind
+          &nbsp;
+          <SiTailwindcss color="#07B6D4" />
+        </p>
+      </a>
       <p className="text-xs pt-1">&copy; Suraj Ramchandran, 2021</p>
     </footer>
   );
