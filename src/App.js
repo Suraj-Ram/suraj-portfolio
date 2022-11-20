@@ -4,18 +4,32 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import PhotoHero from "./components/PhotoHero";
+import Projects2 from "./components/Projects2";
 
 function App() {
+  
   return (
     <>
-      <Header />
+    {/* <Header/> */}
+    {/* Maybe add shadow for the container */}
+    <div className="container mx-auto p-8  md:mt-12  md:max-w-5xl xl:max-w-6xl">
+      {/* <Hero/> */}
+      <PhotoHero/>
+      <Projects2/>
+      
+    </div>
+
+
+      {/* <Header />
       <Hero />
       <div className="container mx-auto px-4 py-2">
-        {/* <Bio /> */}
+        // <Bio />
         <Projects />
         <Contact />
       </div>
-      <Footer />
+      <Footer /> */}
+      
     </>
   );
 }

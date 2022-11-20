@@ -1,14 +1,14 @@
 //import Bio from "./Bio";
-import { useState } from "react"
-import Blob from "./Blob"
+import { useState } from "react";
+import Blob from "./Blob";
 
 const Hero = () => {
-  const [windowWidth, setwindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setwindowWidth] = useState(window.innerWidth);
 
-  window.addEventListener("resize", () => setwindowWidth(window.innerWidth))
+  window.addEventListener("resize", () => setwindowWidth(window.innerWidth));
 
   return (
-    <div className=" md:bg-gradient-to-b from-gray-300 to-white">
+    <div className=" ">
       <div className="container mx-auto px-4 py-2">
         <div className="mb-10 md:mb-14 lg:mb-28 xl:mb-32">
           <div className="flex justify-between items-center lg:justify-start lg:gap-4">
@@ -19,13 +19,20 @@ const Hero = () => {
               >
                 Hey, I'm Suraj
               </h1>
-              <p className="prose text-gray-600 max-w-xl dark:text-gray-400 md:text-lg">
+              {/* <p className="prose text-gray-600 max-w-xl dark:text-gray-400 md:text-lg">
                 My interest area is web development, having developed web apps
                 and websites using HTML, CSS, Vanilla JS, React, Bootstrap and
                 Tailwind. I am fascinated particularly fascinated by AI and
                 machine learning and the paradigm shift it brings to problem
                 solving.
-              </p>
+              </p> */}
+              <ul className="flex flex-col gap-4 text-lg text-gray-800">
+                <li>
+                  🎓 Computer Science (B.S) @ Northeastern
+                </li>
+                <li>🛠️ Developer @ Sandbox</li>
+                <li>📍Live in Boston, MA</li>
+              </ul>
             </section>
             <section className="lg:mx-auto invisible md:visible">
               {windowWidth > 768 ? <Blob idx="3" color="#9CA3AF" /> : " "}
@@ -34,7 +41,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
