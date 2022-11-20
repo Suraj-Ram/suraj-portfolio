@@ -13,7 +13,7 @@ function Headshot({ picture }) {
 function PhotoHero() {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between md:mx-4 mb-12 lg:mb-40">
+      <div className="flex flex-col md:flex-row justify-between md:mx-4 mb-12 items-center">
 
         <div className="flex flex-col max-w-xl gap-2 order-2">
           <span className="text-lg text-gray-400 ">Hi, I'm 👋</span>
