@@ -1,5 +1,5 @@
 import React from "react";
-import projectsList from "../content/projects"
+import projectsList from "../content/projects";
 
 function PrimaryHeading({ text }) {
   return (
@@ -50,65 +50,38 @@ function LinkWrapper({ children, link }) {
   );
 }
 
-function ProjectDate({children}) {
-    return (      <p className="tracking-wide text-sm font-light text-gray-500 my-2">
-    { children }
-  </p>)
+function ProjectDate({ children }) {
+  return (
+    <p className="tracking-wide text-sm font-light text-gray-500 my-2">
+      {children}
+    </p>
+  );
 }
 
-function Project({projectContent}) {
-    return (
-        <>
-        <LinkWrapper>
-            <SecondaryHeading text={projectContent.title} />
-        </LinkWrapper>
-        <ProjectDate>{projectContent.date}</ProjectDate>
-        <UnorderedList>
-            {
-                projectContent.listDescription.map(item => <ListItem>{item}</ListItem>)
-            }
-
-        </UnorderedList>
-
-        </>
-    )
+function Project({ projectContent }) {
+  return (
+    <>
+      <LinkWrapper>
+        <SecondaryHeading text={projectContent.title} />
+      </LinkWrapper>
+      <ProjectDate>{projectContent.date}</ProjectDate>
+      <UnorderedList>
+        {projectContent.listDescription.map((item) => (
+          <ListItem>{item}</ListItem>
+        ))}
+      </UnorderedList>
+    </>
+  );
 }
 
 function Projects2() {
   return (
     <div className="mx-4">
       <PrimaryHeading text="🛠 Projects" />
-      {/* <SecondaryHeading text="Siglo - Reinvent your input."/> */}
-      <LinkWrapper>
-        <SecondaryHeading text="Siglo - Reinvent your input." />
-      </LinkWrapper>
-      <p className="tracking-wide text-sm font-light text-gray-500 my-2">
-        February 2022
-      </p>
-      <UnorderedList>
-        <ListItem>
-          A Python and OpenCV program that controls a computer using gestures
-          captured by the webcam.
-        </ListItem>
-        <ListItem>
-          Won most technically challenging product at HackBeanPot 2022 🏆.
-        </ListItem>
-        <ListItem>
-          Supported gestures for controlling arrow keys, horizontal and vertical
-          scrolling for going through presentations, seeking video playback and
-          simply just scrolling through web pages.
-        </ListItem>
-        <ListItem>
-          The program classifies gestures by interpreting 21 key hand landmarks
-          provided by a pre-trained neural network from MediaPipe (a Google CV
-          library).
-        </ListItem>
-        <ListItem>Read full listing on [Devpost!]</ListItem>
-      </UnorderedList>
 
-      {
-        projectsList.map(project => <Project projectContent={project}></Project>)
-      }
+      {projectsList.map((project) => (
+        <Project projectContent={project}></Project>
+      ))}
 
       <PrimaryHeading text="👔 Experience" />
 
