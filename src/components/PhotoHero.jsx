@@ -5,7 +5,7 @@ function Headshot({ picture }) {
   return (
     <img
       src={picture}
-      className="rounded-full max-h-40 grayscale hover:grayscale-0"
+      className="rounded-full max-h-40 grayscale hover:grayscale-0 order-1 md:order-2 object-scale-down"
     ></img>
   );
 }
@@ -13,10 +13,11 @@ function Headshot({ picture }) {
 function PhotoHero() {
   return (
     <>
-      <div className="flex justify-between md:mx-4 mb-12 lg:mb-40">
-        <div className="flex flex-col max-w-xl gap-2">
+      <div className="flex flex-col md:flex-row justify-between md:mx-4 mb-12 lg:mb-40">
+
+        <div className="flex flex-col max-w-xl gap-2 order-2">
           <span className="text-lg text-gray-400 ">Hi, I'm 👋</span>
-          <span className="text-6xl text-blue-600 font-bold tracking-tight">
+          <span className="text-4xl md:text-5xl lg:text-6xl text-blue-600 font-bold tracking-tight">
             Suraj Ramchandran
           </span>
 
@@ -26,6 +27,7 @@ function PhotoHero() {
             Development.
           </span>
         </div>
+
         <Headshot picture={headshotPic} />
       </div>
     </>

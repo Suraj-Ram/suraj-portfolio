@@ -13,7 +13,7 @@ function App() {
     <>
     {/* <Header/> */}
     {/* Maybe add shadow for the container */}
-    <div className="container mx-auto p-8  md:mt-12  md:max-w-5xl xl:max-w-6xl">
+    <div className="container mx-auto p-8  md:mt-12 shadow-lg md:max-w-5xl xl:max-w-6xl">
       {/* <Hero/> */}
       <PhotoHero/>
       <Projects2/>
