@@ -2,12 +2,12 @@ import React from 'react'
 import ContentWrapper from './ContentWrapper'
 import { PrimaryHeading } from './TypoUtils'
 
-function AboutMe() {
+function Experience() {
   return (
     <ContentWrapper>
-        <PrimaryHeading text={"👨‍💻 About Me"}></PrimaryHeading>
+        <PrimaryHeading text="👔 Experience"/>
     </ContentWrapper>
   )
 }
 
-export default AboutMe
+export default Experience

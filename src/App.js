@@ -8,6 +8,7 @@ import PhotoHero from "./components/PhotoHero";
 import Projects2 from "./components/Projects2";
 import NavCluster from "./components/NavCluster";
 import AboutMe from "./components/AboutMe";
+import Experience from "./components/Experience";
 
 function App() {
   
@@ -21,6 +22,7 @@ function App() {
       <NavCluster/>
       <AboutMe/>
       <Projects2/>
+      <Experience/>
       
     </div>
 

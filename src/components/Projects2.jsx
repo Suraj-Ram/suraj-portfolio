@@ -1,7 +1,13 @@
 import React from "react";
 import projectsList from "../content/projects";
-import {PrimaryHeading, SecondaryHeading, UnorderedList, ListItem, LinkWrapper} from "./TypoUtils"
-
+import ContentWrapper from "./ContentWrapper";
+import {
+  PrimaryHeading,
+  SecondaryHeading,
+  UnorderedList,
+  ListItem,
+  LinkWrapper,
+} from "./TypoUtils";
 
 function ProjectDate({ children }) {
   return (
@@ -29,22 +35,13 @@ function Project({ projectContent }) {
 
 function Projects2() {
   return (
-    <div className="mx-4">
+    <ContentWrapper>
       <PrimaryHeading text="🛠 Projects" />
 
       {projectsList.map((project) => (
         <Project projectContent={project}></Project>
       ))}
-
-      <PrimaryHeading text="👔 Experience" />
-
-      {/*       
-      - A **Python** and **OpenCV** program that controls a computer using gestures captured by the webcam.
-- Won most technically challenging product at HackBeanPot 2022 🏆.
-- Supported gestures for controlling arrow keys, horizontal and vertical scrolling for going through presentations, seeking video playback and simply just scrolling through web pages.
-- The program classifies gestures by interpreting 21 key hand landmarks provided by a pre-trained neural network from **MediaPipe** (a Google CV library).
-- Read full listing on [Devpost!](https://devpost.com/software/siglo) */}
-    </div>
+    </ContentWrapper>
   );
 }
 
