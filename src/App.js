@@ -10,7 +10,7 @@ import NavCluster from "./components/NavCluster";
 import AboutMe from "./components/AboutMe";
 import Experience from "./components/Experience";
 
-function App() {
+function App({ main }) {
   
   return (
     <>
@@ -20,9 +20,12 @@ function App() {
       {/* <Hero/> */}
       <PhotoHero/>
       <NavCluster/>
-      <AboutMe/>
+      <main>
+        {main}
+      </main>
+      {/* <AboutMe/>
       <Projects2/>
-      <Experience/>
+      <Experience/> */}
       
     </div>
 
