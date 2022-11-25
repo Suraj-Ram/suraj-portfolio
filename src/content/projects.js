@@ -4,6 +4,7 @@ const projects = [
   {
     id: 0,
     title: "Siglo - Reinvent your input.",
+    ghLink: "https://github.com/AndreyPiterkin/SigLo",
     date: "February 2022",
     listDescription: [
       <span>
@@ -52,6 +53,7 @@ const projects = [
   {
     id: 2,
     title: "AudiNote - Notes with Voice",
+    ghLink: "https://github.com/JosephSalinas/project-13",
     date: "Octobber 2021",
     listDescription: [
       <span>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function PrimaryHeading({ text }) {
   return (
     <div className="flex">
@@ -40,12 +42,20 @@ function LinkWrapper({ children, link }) {
     <a
       href={link}
       target="_blank"
+      rel="noopener noreferrer"
       className="underline hover:text-blue-600 cursor-pointer"
     >
       {children}
     </a>
   );
 }
+
+function InternalLinkWrapper({ children, link }) {
+  return (
+    <Link to={link}><LinkWrapper>{children}</LinkWrapper></Link>
+  );
+}
+
 
 function S({children}) {
     return <span className="font-bold tracking-wide">{children}</span>
@@ -56,4 +66,4 @@ function Italics({children}) {
 }
 
 
-export {PrimaryHeading, SecondaryHeading, UnorderedList, ListItem, LinkWrapper, S, Italics}
+export {PrimaryHeading, SecondaryHeading, UnorderedList, ListItem, LinkWrapper, InternalLinkWrapper, S, Italics}

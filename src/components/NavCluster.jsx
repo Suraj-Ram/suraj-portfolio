@@ -11,7 +11,7 @@ function NavItem({name, link}) {
   let calculatedClass =  "text-gray-600 px-2 py-3 hover:text-blue-600"
 
   if (isActive(link)) {
-    calculatedClass = calculatedClass + " " + "text-blue-600"
+    calculatedClass = calculatedClass + " text-blue-600"
   }
 
   // return <button className={calculatedClass}><Link to={link}>{name}</Link></button>
