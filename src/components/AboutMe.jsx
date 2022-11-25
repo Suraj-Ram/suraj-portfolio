@@ -19,9 +19,8 @@ function AboutMe() {
           <InternalLinkWrapper link="/experience">SandboxNU</InternalLinkWrapper>, a
           student-led software consultancy at Northeastern{" "}
         </ListItem>
-        <ListItem>My passion lies in Machine Learning ... TODO: </ListItem>
+        {/* <ListItem>My passion lies in Machine Learning ... TODO: </ListItem> */}
         {/* <ListItem>I am from India, but have lived and studied in five countries! (🇻🇳, 🇷🇺, 🇺🇸, 🇹🇷, 🇦🇪)</ListItem> */}
-        <ListItem></ListItem>
       </UnorderedList>
     </ContentWrapper>
   );
