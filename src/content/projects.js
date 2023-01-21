@@ -2,6 +2,31 @@ import { S, LinkWrapper, Italics } from "../components/TypoUtils";
 
 const projects = [
   {
+    id: 3,
+    title: "Marino Tracker",
+    ghLink: "https://github.com/Suraj-Ram/marino-tracker",
+    date: "December 2022",
+    listDescription: [
+      <span>
+        A web application written in <S>React</S> and <S>Javascript</S> that
+        tracks the usage across 5 different sections of my crowded university
+        gym, Marino Center.
+      </span>,
+      <span>
+        Wrote a web scraper that is deployed than scraped{" "}
+        <LinkWrapper link="https://recreation.northeastern.edu/">
+          Marino's website
+        </LinkWrapper>{" "}
+        to log sub-hourly usage metrics in a <S>Cloud Firestore</S> document
+        database. Currently at more than 15,000 documents!
+      </span>,
+      <span>
+        Created a front end using React and the Recharts graphing library to
+        show daily usage data for each day per gym section.
+      </span>,
+    ],
+  },
+  {
     id: 0,
     title: "Siglo - Reinvent your input.",
     ghLink: "https://github.com/AndreyPiterkin/SigLo",
@@ -54,13 +79,15 @@ const projects = [
     id: 2,
     title: "AudiNote - Notes with Voice",
     ghLink: "https://github.com/JosephSalinas/project-13",
-    date: "Octobber 2021",
+    date: "October 2021",
     listDescription: [
       <span>
         A minimalist note-taking web app, written in <S>Javascript</S>, that
         transcribes spoken notes using the{" "}
         <S>
-            <LinkWrapper link="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web Speech API</LinkWrapper>
+          <LinkWrapper link="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">
+            Web Speech API
+          </LinkWrapper>
         </S>
       </span>,
       <span>
