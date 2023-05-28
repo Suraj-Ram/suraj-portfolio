@@ -22,9 +22,7 @@ export default function RootLayout({
         <div className="container mx-auto p-8  md:mt-12 shadow-2xl rounded-lg md:max-w-5xl xl:max-w-6xl md:mb-8">
           <PhotoHero/>
           <NavCluster />
-          {/* <PhotoHero />
-          <NavCluster /> */}
-          {/* <main>{main}</main> */}
+          <main>{children}</main>
         </div>
       </body>
     </html>
