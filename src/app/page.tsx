@@ -1,10 +1,8 @@
 import Image from 'next/image'
+import RenderMarkdown from '@/components/RenderMarkdown'
 
 // About Me Page
 export default function Home() {
-  return (
-    <div>
-      Hello This is content
-    </div>
-  )
+  {/* @ts-expect-error Server Component */}
+  return <RenderMarkdown source='src/content/AboutMe.mdx' />
 }
