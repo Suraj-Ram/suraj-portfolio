@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="container mx-auto p-8  md:mt-12 shadow-2xl rounded-lg md:max-w-5xl xl:max-w-6xl md:mb-8">
+        <div className="container mx-auto p-8 md:mt-12 shadow-2xl rounded-lg md:max-w-5xl xl:max-w-6xl md:mb-8">
           <PhotoHero/>
           <NavCluster />
           <main>{children}</main>
