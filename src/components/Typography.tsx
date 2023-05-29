@@ -34,7 +34,7 @@ export function Heading4({ children }: { children: React.ReactNode }) {
 
 export function UnorderedList({ children }: { children: React.ReactNode }) {
     return (
-        <ul className="space-y-1 md:space-y-2 list-disc list-inside text-myGray-700 text-md tracking-wide">
+        <ul className="space-y-1 md:space-y-2 list-disc list-inside text-myGray-700 text-md tracking-wide mb-2">
             {children}
         </ul>
     );
