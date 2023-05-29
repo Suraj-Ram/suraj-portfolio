@@ -1,7 +1,12 @@
+import RenderMarkdown from "@/components/RenderMarkdown"
+import { PrimaryHeading } from "@/components/Typography"
+
 export default function Experience() {
     return (
-        <div className="fill-main-700">
-            Hello This is experience
-        </div>
+        <>
+            <PrimaryHeading>Experience</PrimaryHeading>
+            {/* @ts-expect-error Server Component */}
+            <RenderMarkdown source="src/content/Experience.mdx" />
+        </>
     )
 }

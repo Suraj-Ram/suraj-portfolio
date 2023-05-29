@@ -25,6 +25,13 @@ export function SecondaryHeading({ children }: { children: React.ReactNode }) {
     );
 }
 
+export function Heading4({ children }: { children: React.ReactNode }) {
+    return (
+        <h4 className="text-lg md:text-xl lg:text-xl my-1 lg:mt-3">{children}</h4>
+    );
+}
+
+
 export function UnorderedList({ children }: { children: React.ReactNode }) {
     return (
         <ul className="space-y-1 md:space-y-2 list-disc list-inside text-myGray-700 text-md tracking-wide">
@@ -71,5 +78,8 @@ export function Italics({ children }: { children: React.ReactNode }) {
     return <span className="italic text-myGray-500">{children}</span>
 }
 
+export function Date({ children }: { children: React.ReactNode }) {
+    return <p className="tracking-wide text-sm font-light text-myGray-500 mb-2 mt-1">{children}</p>
+}
 
 
