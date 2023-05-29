@@ -10,17 +10,17 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: {
-      main: colors.blue,
-      blue: colors.blue, // used to still have blue tw color
-      myGray: colors.slate,
-      slate: colors.slate, // used to still have slate tw color
-    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      colors: {
+        main: colors.blue,
+        blue: colors.blue, // used to still have blue tw color
+        myGray: colors.slate,
+        slate: colors.slate, // used to still have slate tw color
       },
     },
   },
