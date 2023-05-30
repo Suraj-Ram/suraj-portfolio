@@ -15,7 +15,7 @@ export function PrimaryHeading({ children }: { children: React.ReactNode }) {
 
 export function SecondaryHeading({ children }: { children: React.ReactNode }) {
     return (
-        <div className="flex">
+        <div className="flex mb-2">
             <div className="flex items-center w-full mt-2 ">
                 <span className="flex-shrink mr-4 font-semibold text-xl md:text-2xl lg:text-2xl tracking-tight">
                     {children}
@@ -82,4 +82,7 @@ export function Date({ children }: { children: React.ReactNode }) {
     return <p className="tracking-wide text-sm font-light text-myGray-500 mb-2 mt-1">{children}</p>
 }
 
+export function Divider() {
+    return <div className="border-t border-myGray-200 my-4"></div>
+}
 
