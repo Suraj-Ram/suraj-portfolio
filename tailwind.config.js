@@ -1,25 +1,30 @@
-const colors = require("tailwindcss/colors");
+/** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors')
+
 
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
       colors: {
-        sky: colors.sky,
-        cyan: colors.cyan,
-        gumnetal: "#16262e",
-        charcoal: "#2e4756",
-        "cornflower-blue": "#5C95FF",
-        "blue-gray": "#E8F1F2",
-        "my-red": "#FF3A20",
+        main: colors.blue,
+        blue: colors.blue, // used to still have blue tw color
+        myGray: colors.slate,
+        slate: colors.slate, // used to still have slate tw color
       },
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [
-    
+    require('@tailwindcss/typography'),
   ],
-};
+}
