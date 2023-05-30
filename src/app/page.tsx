@@ -1,4 +1,3 @@
-import Image from "next/image";
 import RenderMarkdown from "@/components/RenderMarkdown";
 import NextPage from "@/components/NextPage";
 

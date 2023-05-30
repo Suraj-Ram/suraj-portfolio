@@ -3,7 +3,7 @@ import Link from "next/link";
 export function PrimaryHeading({ children }: { children: React.ReactNode }) {
     return (
         <div className="flex">
-            <div className="flex items-center w-full mb-6 mt-3 lg:mt-6">
+            <div className="flex items-center w-full md:mb-3 lg:mb-6 mt-3 lg:mt-6">
                 <span className="flex-shrink mr-4 font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight">
                     {children}
                 </span>
