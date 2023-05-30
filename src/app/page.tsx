@@ -1,8 +1,14 @@
-import Image from 'next/image'
-import RenderMarkdown from '@/components/RenderMarkdown'
+import Image from "next/image";
+import RenderMarkdown from "@/components/RenderMarkdown";
+import NextPage from "@/components/NextPage";
 
 // About Me Page
 export default function Home() {
-  {/* @ts-expect-error Server Component */}
-  return <RenderMarkdown source='src/content/AboutMe.mdx' />
+	return (
+		<>
+			{/* @ts-expect-error Server Component */}
+			<RenderMarkdown source="src/content/AboutMe.mdx" />
+      <NextPage stub="/projects" name="Projects" />
+		</>
+	);
 }
