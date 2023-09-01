@@ -31,9 +31,8 @@ export default function PhotoHero() {
 					<Name />
 
 					<span className="text-lg text-myGray-700 text-">
-						I am a second-year Computer Science (B.S.) student at Northeastern
-						University interested in <Bold>Artificial Intelligence</Bold> and{" "}
-						<Bold>Full-stack Web Development</Bold>.
+						I am a third-year Computer Science (B.S.) student at Northeastern
+						University interested in <Bold>Full-stack Development</Bold> and <Bold>Machine Learning</Bold>.
 					</span>
 					<SocialLinks />
 				</div>
