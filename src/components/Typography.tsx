@@ -15,9 +15,9 @@ export function PrimaryHeading({ children }: { children: React.ReactNode }) {
 
 export function SecondaryHeading({ children }: { children: React.ReactNode }) {
     return (
-        <div className="flex mb-2">
+        <div className="flex mb-2 mt-1 md:mb-4 md:mt-3">
             <div className="flex items-center w-full mt-2 ">
-                <span className="flex-shrink mr-4 font-semibold text-xl md:text-2xl lg:text-2xl tracking-tight">
+                <span className="flex-shrink mr-4 font-semibold text-2xl md:text-3xl tracking-tight">
                     {children}
                 </span>
             </div>
@@ -34,7 +34,7 @@ export function Heading4({ children }: { children: React.ReactNode }) {
 
 export function UnorderedList({ children }: { children: React.ReactNode }) {
     return (
-        <ul className="space-y-1 md:space-y-2 list-disc list-inside text-myGray-700 text-md tracking-wide mb-2">
+        <ul className="space-y-1 md:space-y-2 list-disc list-outside text-myGray-700 text-md tracking-wide mb-2">
             {children}
         </ul>
     );

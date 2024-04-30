@@ -30,7 +30,7 @@ export default async function RenderMarkdown({ source }: { source: string }) {
 
     return (
         // Use prose to add default styling to elements without a custom component
-        <article className="  max-w-none  ">
+        <article className="max-w-none prose">
             {/* @ts-expect-error Server Component */}
             <MDXRemote source={markdownContent} components={customComponents} />
         </article>
