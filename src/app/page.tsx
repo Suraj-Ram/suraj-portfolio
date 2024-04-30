@@ -11,7 +11,6 @@ export default function Home() {
 		<>
 			{/* @ts-expect-error Server Component */}
 			<RenderMarkdown source="src/content/AboutMe.mdx" />
-			{/* @ts-expect-error Server Component */}
 			{/* <RenderMarkdown source="src/content/Projects.mdx" /> */}
 			{/* <SecondaryHeading>Projects</SecondaryHeading> */}
 			<ProjectsParent />
