@@ -23,7 +23,7 @@ export default function PhotoHeroSmall() {
 	// TODO make this whole component friendly on mobile
 	return (
 		<>
-			<div className="flex flex-col md:flex-row justify-between py-2 lg:py-6 md:mx-4 mb-10 items-center">
+			<div className="flex flex-col sm:flex-row justify-between py-2 lg:py-6 md:mx-4 mb-10 items-center">
 				<div className="flex flex-col max-w-xl gap-2 order-2">
 					<span className="text-md text-myGray-400 tracking-wide">
 						👋 Hi, I'm
@@ -40,7 +40,7 @@ export default function PhotoHeroSmall() {
 				<Image
 					src={headshotPicture}
 					alt="Picture of Suraj"
-					className="order-1 md:order-2 rounded-full shadow-md grayscale hover:grayscale-0 transition duration-300 ease-in-out"
+					className="order-1 sm:order-2 rounded-full shadow-md grayscale hover:grayscale-0 transition duration-300 ease-in-out"
 					height={100}
 				></Image>
 			</div>
