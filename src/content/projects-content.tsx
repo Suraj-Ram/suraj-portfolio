@@ -20,6 +20,7 @@ export interface ProjectItem {
 	description: ReactNode;
 	techStack: TechStackItem[];
 	primaryLink: string;
+    impactPoints?: string[];
 	links?: {
 		website?: string;
 		github?: string;
@@ -58,17 +59,27 @@ export interface ProjectItem {
 */
 
 export const projectsData: ProjectItem[] = [
+    {
+        dateStr: "Jan - Dec 2023",
+        title: "Faculty Activity Tracker",
+        description: "",
+        techStack: [],
+        primaryLink: ""
+    },
 	{
 		title: "Recreation Tracker",
 		dateStr: "December 2022",
 		// add jsx for desciprtion
-		description: ( "aaaa"
+		description: ( "Small 2 sentence description"
 		),
 		techStack: [],
 		primaryLink: "https://github.com/Suraj-Ram/marino-tracker",
 		links: {
 			website: "https://recreation.northeastern.edu/",
 		},
+        impactPoints: [
+            "Currently scrapped more than 100,000 datapoints",
+        ]
 	},
 	{
 		title: "SigLo - Reinvent your input.",
@@ -81,6 +92,9 @@ export const projectsData: ProjectItem[] = [
 		links: {
 			website: "https://devpost.com/software/siglo",
 		},
+        impactPoints: [
+            "Won most technically challenging product at HackBeanPot 2022 🏆",
+        ]
 	},
 	{
 		title: "Java Image Editor",
@@ -90,5 +104,6 @@ export const projectsData: ProjectItem[] = [
 		techStack: [],
 		primaryLink: "", // Since the code is private and no link was provided
 		links: {},
+            
 	},
 ];
