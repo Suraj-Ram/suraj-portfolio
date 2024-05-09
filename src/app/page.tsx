@@ -9,6 +9,7 @@ import Experience from "@/components/Timeline";
 export default function Home() {
 	return (
 		<>
+			<PhotoHeroSmall />
 			{/* @ts-expect-error Server Component */}
 			<RenderMarkdown source="src/content/AboutMe.mdx" />
 			{/* <RenderMarkdown source="src/content/Projects.mdx" /> */}
