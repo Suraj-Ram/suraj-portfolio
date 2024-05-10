@@ -8,11 +8,11 @@ interface TimelineItemProps {
 interface JobExperienceItem {
 	date: string,
 	title: string,
-	
+
 
 }
 
-const TimelineItem: React.FC<TimelineItemProps> = ({
+export const TimelineItem: React.FC<TimelineItemProps> = ({
 	date,
 	title,
 	description,
@@ -35,7 +35,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 	);
 };
 
-const Timeline: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const Timeline: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	return (
 		<ol className="relative border-s border-slate-200 dark:border-slate-700">
 			{children}

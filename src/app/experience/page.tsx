@@ -1,4 +1,5 @@
 import RenderMarkdown from "@/components/RenderMarkdown"
+import { Timeline, TimelineItem } from "@/components/Timeline"
 import { PrimaryHeading } from "@/components/Typography"
 
 export default function Experience() {
