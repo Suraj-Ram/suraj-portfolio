@@ -74,9 +74,13 @@ export const projectsData: ProjectItem[] = [
 	{
 		dateStr: "Jan - Dec 2023",
 		title: "Faculty Activity Tracker",
-		description: "",
+		description: "A performance review tool to be used for documenting and comparing faculty performance within the Arts and Design department.",
 		techStack: [TechStackItem.typescript, TechStackItem.nextjs, TechStackItem.postgres],
-		primaryLink: ""
+		primaryLink: "",
+		impactPoints: [
+			"Implemented a role-based access control system",
+			"TODO add more"
+		]
 	},
 	{
 		title: "Recreation Tracker",
@@ -84,7 +88,7 @@ export const projectsData: ProjectItem[] = [
 		// add jsx for desciprtion
 		description: ("Small 2 sentence description"
 		),
-		techStack: [TechStackItem.javascript, TechStackItem.react, TechStackItem.firebase, TechStackItem.noSql],
+		techStack: [TechStackItem.nodejs, TechStackItem.react, TechStackItem.firebase, TechStackItem.noSql],
 		primaryLink: "https://github.com/Suraj-Ram/marino-tracker",
 		links: {
 			website: "https://recreation.northeastern.edu/",

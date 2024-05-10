@@ -15,13 +15,19 @@ export function PrimaryHeading({ children }: { children: React.ReactNode }) {
 
 export function SecondaryHeading({ children }: { children: React.ReactNode }) {
     return (
-        <div className="flex mb-2 mt-1 md:mb-4 md:mt-3">
+        <div className="flex mb-2 mt-1 md:mb-5 md:mt-3">
             <div className="flex items-center w-full mt-2 ">
                 <span className="flex-shrink mr-4 font-semibold text-2xl md:text-3xl tracking-tight">
                     {children}
                 </span>
             </div>
         </div>
+    );
+}
+
+export function Heading3({ children }: { children: React.ReactNode }) {
+    return (
+        <h3 className="text-xl md:text-xl lg:text-2xl my-1 lg:mt-3">{children}</h3>
     );
 }
 
