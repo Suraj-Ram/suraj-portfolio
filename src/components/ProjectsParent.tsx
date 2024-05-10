@@ -41,7 +41,7 @@ interface ProjectCardProps {
 	};
 	impactPoints?: string[];
 }
-function ProjectCard({
+export function ProjectCard({
 	dateStr,
 	title,
 	description,
@@ -56,8 +56,9 @@ function ProjectCard({
 				<div className="p-4 flex-1">
 					<span className="text-gray-500 text-sm">{dateStr}</span>
 					<h2 className="text-xl font-semibold">{title}</h2>
-					<span className="text-sm text-gray-500">{techStack}</span>
-					<p className="text-gray-600 text-md">{description}</p>
+
+					{techStack && techStack.length > 0 && (<p className="text-sm text-blue-600 font-medium mt-1 mb-2">{techStack.join(" | ")}</p>)}
+					<p className="text-gray-500 text-md">{description}</p>
 					{/* Render out impact points as an unordered list with an icon as the bullet point */}
 					{impactPoints && impactPoints.length > 0 && (
 						<ul className="text-gray-600 text-md mt-2">
@@ -106,11 +107,13 @@ const SeeMoreLink = () => (
 	</Link>
 );
 export default function ProjectsParent() {
+	const featuredProjects = projectsData.slice(0, 3);
+
 	return (
 		<div className="py-10">
 			<SecondaryHeading>Projects</SecondaryHeading>
 			<div className="flex flex-col gap-3">
-				{projectsData.map((project, i) => (
+				{featuredProjects.map((project, i) => (
 					<ProjectCard key={i} {...project} links={project.links || {}} />
 				))}
 			</div>

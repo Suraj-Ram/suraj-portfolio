@@ -7,9 +7,21 @@ export enum TechStackItem {
 	javascript = "JavaScript",
 	typescript = "TypeScript",
 	react = "React",
-	nextjs = "Next.js",
+	nextjs = "NextJS",
 	nodejs = "Node.js",
 	express = "Express",
+	firebase = "Firebase",
+	noSql = "NoSQL",
+	postgres = "PostgreSQL",
+	openCV = "OpenCV",
+	java = "Java",
+	swing = "Swing",
+	pytorch = "PyTorch",
+	tensorflow = "TensorFlow",
+	html = "HTML",
+	css = "CSS",
+	tailwind = "TailwindCSS",
+	streamlit = "Streamlit",
 	// ...
 }
 
@@ -20,7 +32,7 @@ export interface ProjectItem {
 	description: ReactNode;
 	techStack: TechStackItem[];
 	primaryLink: string;
-    impactPoints?: string[];
+	impactPoints?: string[];
 	links?: {
 		website?: string;
 		github?: string;
@@ -59,51 +71,99 @@ export interface ProjectItem {
 */
 
 export const projectsData: ProjectItem[] = [
-    {
-        dateStr: "Jan - Dec 2023",
-        title: "Faculty Activity Tracker",
-        description: "",
-        techStack: [],
-        primaryLink: ""
-    },
+	{
+		dateStr: "Jan - Dec 2023",
+		title: "Faculty Activity Tracker",
+		description: "",
+		techStack: [TechStackItem.typescript, TechStackItem.nextjs, TechStackItem.postgres],
+		primaryLink: ""
+	},
 	{
 		title: "Recreation Tracker",
 		dateStr: "December 2022",
 		// add jsx for desciprtion
-		description: ( "Small 2 sentence description"
+		description: ("Small 2 sentence description"
 		),
-		techStack: [],
+		techStack: [TechStackItem.javascript, TechStackItem.react, TechStackItem.firebase, TechStackItem.noSql],
 		primaryLink: "https://github.com/Suraj-Ram/marino-tracker",
 		links: {
 			website: "https://recreation.northeastern.edu/",
 		},
-        impactPoints: [
-            "Currently scrapped more than 100,000 datapoints",
-        ]
+		impactPoints: [
+			"Currently scrapped more than 100,000 datapoints",
+		]
 	},
 	{
 		title: "SigLo - Reinvent your input.",
 		dateStr: "February 2022",
-		description:( "aaaaaaaaa"
+		description: ("aaaaaaaaa"
 
-        ),
-		techStack: [],
+		),
+		techStack: [TechStackItem.python, TechStackItem.openCV],
 		primaryLink: "https://github.com/AndreyPiterkin/SigLo",
 		links: {
 			website: "https://devpost.com/software/siglo",
 		},
-        impactPoints: [
-            "Won most technically challenging product at HackBeanPot 2022 🏆",
-        ]
+		impactPoints: [
+			"Won most technically challenging product at HackBeanPot 2022 🏆",
+		]
 	},
 	{
 		title: "Java Image Editor",
 		dateStr: "June 2022",
 		description:
 			"An image editor written in Java 8 that applies a variety of filters using matrix operations. It utilizes the MVC architecture to decouple the Model, View, and Controller. The application supports common image types and .ppm images, and can be interacted with using the GUI made using Swing and via the console through text inputs.",
-		techStack: [],
+		techStack: [TechStackItem.java, TechStackItem.swing],
 		primaryLink: "", // Since the code is private and no link was provided
 		links: {},
-            
+
 	},
+	{
+		title: "Distributed KV Store",
+		dateStr: "January - March 2022",
+		description: "Implementation of a highly avliable, distributed key-value store intended for high-performance computing environments.",
+		techStack: [TechStackItem.python],
+		primaryLink: "https://github.com/example/distributed-kv-store"
+	},
+	{
+		title: "Audinote",
+		dateStr: "March - July 2023",
+		description: "A note-taking app that converts audio recordings to text using advanced speech recognition and provides tools for semantic analysis.",
+		techStack: [TechStackItem.javascript, TechStackItem.html, TechStackItem.css],
+		primaryLink: "https://github.com/example/audinote"
+	},
+	{
+		title: "MNIST Playground",
+		dateStr: "August - December 2021",
+		description: "Interactive web application for experimenting with the MNIST dataset to train and visualize different neural network architectures.",
+		techStack: [],
+		primaryLink: "https://github.com/example/mnist-playground"
+	},
+	{
+		title: "Neural Stock Predictor",
+		dateStr: "April - October 2022",
+		description: "A stock price prediction tool using deep learning to analyze historical data and predict future stock price movements.",
+		techStack: [TechStackItem.pytorch, TechStackItem.streamlit],
+		primaryLink: "https://github.com/example/neural-stock-predictor"
+	},
+	{
+		title: "BFS/DFS Maze Solver",
+		dateStr: "January - February 2021",
+		description: "A visualization tool for comparing the performance of BFS and DFS algorithms in solving mazes.",
+		techStack: [TechStackItem.java],
+		primaryLink: "https://github.com/example/maze-solver"
+	},
+	{
+		title: "Portfolio Website",
+		dateStr: "",
+		description: "This website! Made to showcase my projects, skills, and experience.",
+		techStack: [TechStackItem.nextjs, TechStackItem.tailwind],
+		primaryLink: "",
+		impactPoints: [
+			"Statically generated site using Next 14",
+			"Used MDX for content management",
+		]
+	}
 ];
+
+

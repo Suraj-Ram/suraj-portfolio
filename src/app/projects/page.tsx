@@ -1,14 +1,29 @@
-import { PrimaryHeading } from "@/components/Typography";
 import RenderMarkdown from "@/components/RenderMarkdown";
-import NextPage from "@/components/NextPage";
+import { PrimaryHeading, SecondaryHeading } from "@/components/Typography";
+import { projectsData } from "@/content/projects-content";
+import { ProjectCard } from "@/components/ProjectsParent";
 
 export default function Projects() {
 	return (
 		<>
-			<PrimaryHeading>Projects</PrimaryHeading>
+
+			<div className="py-10">
+				<SecondaryHeading>Projects</SecondaryHeading>
+				<div className="flex flex-col gap-3">
+					{projectsData.map((project, i) => (
+						<ProjectCard key={i} {...project} links={project.links || {}} />
+					))}
+				</div>
+			</div>
+
+
+
+
+
+
+
 			{/* @ts-expect-error Server Component */}
 			<RenderMarkdown source="src/content/Projects.mdx" />
-      <NextPage stub="/experience" name="Experience" />
 		</>
 	);
 }
