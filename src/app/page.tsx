@@ -12,11 +12,9 @@ export default function Home() {
 			<PhotoHeroSmall />
 			{/* @ts-expect-error Server Component */}
 			<RenderMarkdown source="src/content/AboutMe.mdx" />
-			{/* <RenderMarkdown source="src/content/Projects.mdx" /> */}
-			{/* <SecondaryHeading>Projects</SecondaryHeading> */}
 			<ProjectsParent />
-			<SecondaryHeading>Experience</SecondaryHeading>
-			<Experience />
+			{/* <SecondaryHeading>Experience</SecondaryHeading> */}
+			{/* <Experience /> */}
 		</>
 	);
 }
