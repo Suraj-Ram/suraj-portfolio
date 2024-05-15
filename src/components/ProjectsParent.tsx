@@ -54,7 +54,7 @@ export function ProjectCard({
 		return (
 			<div className="rounded-lg border border-gray-200 flex items-center cursor-pointer hover:border-gray-400">
 				<div className="p-4 flex-1">
-					<span className="text-gray-500 text-sm">{dateStr}</span>
+					<span className="text-gray-500 text-sm uppercase font-light">{dateStr}</span>
 					<h2 className="text-xl font-semibold">{title}</h2>
 
 					{techStack && techStack.length > 0 && (<p className="text-sm text-blue-600 font-medium mt-1 mb-2">{techStack.join(" | ")}</p>)}
@@ -68,13 +68,13 @@ export function ProjectCard({
 						</ul>
 					)}
 				</div>
-				<ChevronRight className="text-myGray-600 mr-3" />
+				<ChevronRight className={`text-myGray-600 mr-3 ${!primaryLink && "invisible"}`} />
 			</div>
 		);
 	}
 
 	// If there are no links, return the card without a link
-	if (Object.keys(links).length === 0) {
+	if (!primaryLink) {
 		return InnerProjectCard();
 	}
 
