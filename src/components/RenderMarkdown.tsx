@@ -7,7 +7,6 @@ import { MDXComponents } from "mdx/types"
 
 async function getTextFromFile(filepath: string) {
     // Filepath is relative to project root directory
-    const fullPath = path.join(process.cwd(), filepath)
     const fileContents = await fs.readFile(filepath)
     return fileContents
 }
@@ -15,6 +14,7 @@ async function getTextFromFile(filepath: string) {
 const customComponents: MDXComponents = {
     h1: (props: any) => <T.PrimaryHeading {...props} />,
     h2: (props: any) => <T.SecondaryHeading {...props} />,
+    h3: (props: any) => <T.Heading3 {...props} />,
     h4: (props: any) => <T.Heading4 {...props} />,
     h6: (props: any) => <T.Date {...props} />,
     ul: (props: any) => <T.UnorderedList {...props} />,
@@ -30,7 +30,7 @@ export default async function RenderMarkdown({ source }: { source: string }) {
 
     return (
         // Use prose to add default styling to elements without a custom component
-        <article className="  max-w-none  ">
+        <article className="max-w-none prose">
             {/* @ts-expect-error Server Component */}
             <MDXRemote source={markdownContent} components={customComponents} />
         </article>
