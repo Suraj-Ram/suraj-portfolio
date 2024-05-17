@@ -40,7 +40,7 @@ export default function PhotoHeroSmall() {
 				<Image
 					src={headshotPicture}
 					alt="Picture of Suraj"
-					className="order-1 sm:order-2 rounded-full shadow-md grayscale hover:grayscale-0 transition duration-300 ease-in-out"
+					className="order-1 sm:order-2 rounded-full shadow-md transition duration-300 ease-in-out"
 					height={100}
 				></Image>
 			</div>

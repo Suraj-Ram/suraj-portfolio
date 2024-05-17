@@ -92,7 +92,7 @@ export const projectsData: ProjectItem[] = [
 			website: "https://recreation.northeastern.edu/",
 		},
 		impactPoints: [
-			"Currently scrapped more than 100,000 datapoints",
+			"Currently scraped more than 100,000 datapoints",
             "Frontend built using React and Recharts",
 		]
 	},
