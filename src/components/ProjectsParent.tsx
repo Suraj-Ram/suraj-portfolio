@@ -3,6 +3,7 @@ import { TechStackItem } from "@/content/projects-content";
 import { projectsData } from "@/content/projects-content";
 import { BadgeCheckIcon, ChevronDown, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { SeeMoreLink } from "./SeeMoreLink";
 
 const Step = ({
 	title,
@@ -54,7 +55,7 @@ export function ProjectCard({
 		return (
 			<div className="rounded-lg border border-gray-200 flex items-center cursor-pointer hover:border-gray-400">
 				<div className="p-4 flex-1">
-					
+
 					<span className="text-gray-500 text-sm uppercase font-light">
 						{dateStr}
 					</span>
@@ -95,27 +96,6 @@ export function ProjectCard({
 	);
 }
 
-export const SeeMoreLink = () => (
-	<Link href="/projects">
-		<span className=" flex items-center justify-center my-4 px-4 py-2 text-sm font-medium">
-			See more
-			<svg
-				className="h-4 w-4 ml-1"
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke="currentColor"
-			>
-				<path
-					strokeLinecap="round"
-					strokeLinejoin="round"
-					strokeWidth={2}
-					d="M19 9l-7 7-7-7"
-				/>
-			</svg>
-		</span>
-	</Link>
-);
 export default function ProjectsParent() {
 	const NUM_PROJECTS = 4;
 	const featuredProjects = projectsData.slice(0, NUM_PROJECTS);
@@ -128,7 +108,7 @@ export default function ProjectsParent() {
 					<ProjectCard key={i} {...project} links={project.links || {}} />
 				))}
 			</div>
-			<SeeMoreLink />
+			<SeeMoreLink link="/projects" />
 		</div>
 	);
 }
