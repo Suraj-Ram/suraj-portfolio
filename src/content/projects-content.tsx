@@ -20,6 +20,7 @@ export enum TechStackItem {
 	css = "CSS",
 	tailwind = "TailwindCSS",
 	streamlit = "Streamlit",
+	rust = "Rust",
 	// ...
 }
 
@@ -39,18 +40,30 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
 	{
+		dateStr: "June 2024",
+		title: "Multi-threaded Web Server 🦀",
+		description: "A lightweight web server written in Rust that serves static files and supports HTTP/1.1. Implements a thread pool for handling multiple requests concurrently.",
+		techStack: [TechStackItem.rust],
+		primaryLink: "/projects/rust-web-server",
+		impactPoints: [
+			"Implemented a thread pool from scratch",
+			"Supports gzip compression for serving static files",
+
+		]
+	},
+	{
 		dateStr: "January - December 2023",
-		title: "Faculty Activity Tracker",
+		title: "Faculty Activity Tracker 🏅",
 		description: "A performance review tool to be used for documenting and comparing faculty performance within the Arts and Design department.",
 		techStack: [TechStackItem.typescript, TechStackItem.nextjs, TechStackItem.postgres],
-		primaryLink: "",
+		primaryLink: "/projects/faculty-activity-tracker",
 		impactPoints: [
             "To be used by 120+ faculty",
 			"Implemented a role-based access control system",
 		]
 	},
 	{
-		title: "Recreation Tracker",
+		title: "Recreation Tracker 💪",
 		dateStr: "December 2022",
 		// add jsx for desciprtion
 		description: ("Tracks and logs the daily, weekly and monthly usage across my college's gyms to find out the best time to go work out!"
@@ -66,7 +79,7 @@ export const projectsData: ProjectItem[] = [
 		]
 	},
 	{
-		title: "SigLo - Reinvent your input.",
+		title: "SigLo - Reinvent your input. 🖐️",
 		dateStr: "February 2022",
 		description: ("Control your computer using gestures captured by the webcam. Can control arrow keys, horizontal and vertical scrolling, video playback and volume."
 

@@ -50,7 +50,7 @@ export default function Navbar() {
 				<LogoLink invisible={loc === "/"} />
 			</div>
 			{/* Nav bar */}
-			<div className="flex justify-center items-center">
+			<div className="flex justify-center items-center font-mono">
 				{navLinks.map((navLink) => {
 					return <LinkItem key={navLink.name} name={navLink.name} link={navLink.link} active={loc === navLink.link}/>;
 				})}
