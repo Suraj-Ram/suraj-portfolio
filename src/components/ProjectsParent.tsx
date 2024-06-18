@@ -3,6 +3,7 @@ import { TechStackItem } from "@/content/projects-content";
 import { projectsData } from "@/content/projects-content";
 import { BadgeCheckIcon, ChevronDown, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { SeeMoreLink } from "./SeeMoreLink";
 
 const Step = ({
 	title,
@@ -54,21 +55,28 @@ export function ProjectCard({
 		return (
 			<div className="rounded-lg border border-gray-200 flex items-center cursor-pointer hover:border-gray-400">
 				<div className="p-4 flex-1">
-					<span className="text-gray-500 text-sm uppercase font-light">{dateStr}</span>
+
+					<span className="text-gray-500 text-sm uppercase font-light">
+						{dateStr}
+					</span>
 					<h2 className="text-xl font-semibold">{title}</h2>
 
-					{techStack && techStack.length > 0 && (<p className="text-sm text-blue-600 font-medium mt-1 mb-2">{techStack.join(" | ")}</p>)}
+					{techStack && techStack.length > 0 && (
+						<p className="text-sm text-blue-600 font-medium mt-1 mb-2">
+							{techStack.join(" | ")}
+						</p>
+					)}
 					<p className="text-gray-500 text-md">{description}</p>
 					{/* Render out impact points as an unordered list with an icon as the bullet point */}
 					{impactPoints && impactPoints.length > 0 && (
 						<ul className="text-gray-600 text-md mt-2">
-							{impactPoints?.map((point, i) => (
-								<Step key={i} title={point} />
-							))}
+							{impactPoints?.map((point, i) => <Step key={i} title={point} />)}
 						</ul>
 					)}
 				</div>
-				<ChevronRight className={`text-myGray-600 mr-3 ${!primaryLink && "invisible"}`} />
+				<ChevronRight
+					className={`text-myGray-600 mr-3 ${!primaryLink && "invisible"}`}
+				/>
 			</div>
 		);
 	}
@@ -79,45 +87,28 @@ export function ProjectCard({
 	}
 
 	return (
-		<Link href={primaryLink} target="_blank">
+		<Link
+			href={primaryLink}
+			target={primaryLink.startsWith("/") ? "_self" : "_blank"}
+		>
 			{InnerProjectCard()}
 		</Link>
 	);
 }
 
-const SeeMoreLink = () => (
-	<Link href="/projects">
-		<span className=" flex items-center justify-center my-4 px-4 py-2 text-sm font-medium">
-			See more
-			<svg
-				className="h-4 w-4 ml-1"
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke="currentColor"
-			>
-				<path
-					strokeLinecap="round"
-					strokeLinejoin="round"
-					strokeWidth={2}
-					d="M19 9l-7 7-7-7"
-				/>
-			</svg>
-		</span>
-	</Link>
-);
 export default function ProjectsParent() {
-	const featuredProjects = projectsData.slice(0, 3);
+	const NUM_PROJECTS = 4;
+	const featuredProjects = projectsData.slice(0, NUM_PROJECTS);
 
 	return (
-		<div className="py-10">
+		<div className="">
 			<SecondaryHeading>Projects</SecondaryHeading>
 			<div className="flex flex-col gap-3">
 				{featuredProjects.map((project, i) => (
 					<ProjectCard key={i} {...project} links={project.links || {}} />
 				))}
 			</div>
-			<SeeMoreLink />
+			<SeeMoreLink link="/projects" />
 		</div>
 	);
 }

@@ -20,6 +20,7 @@ export enum TechStackItem {
 	css = "CSS",
 	tailwind = "TailwindCSS",
 	streamlit = "Streamlit",
+	rust = "Rust",
 	// ...
 }
 
@@ -39,18 +40,30 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
 	{
-		dateStr: "January - December 2023",
-		title: "Faculty Activity Tracker",
-		description: "A performance review tool to be used for documenting and comparing faculty performance within the Arts and Design department.",
-		techStack: [TechStackItem.typescript, TechStackItem.nextjs, TechStackItem.postgres],
+		dateStr: "June 2024",
+		title: "Multi-threaded Web Server 🦀",
+		description: "A lightweight web server written in Rust that serves static files and supports HTTP/1.1. Implements a thread pool for handling multiple requests concurrently.",
+		techStack: [TechStackItem.rust],
 		primaryLink: "",
 		impactPoints: [
-            "To be used by 120+ faculty",
+			"Implemented a thread pool from scratch",
+			"Supports gzip compression for serving static files",
+
+		]
+	},
+	{
+		dateStr: "January - December 2023",
+		title: "Faculty Activity Tracker 🏅",
+		description: "A performance review tool to be used for documenting and comparing faculty performance within the Arts and Design department.",
+		techStack: [TechStackItem.typescript, TechStackItem.nextjs, TechStackItem.postgres],
+		primaryLink: "https://github.com/sandboxnu/faculty-activity-tracker",
+		impactPoints: [
+			"To be used by 120+ faculty",
 			"Implemented a role-based access control system",
 		]
 	},
 	{
-		title: "Recreation Tracker",
+		title: "Recreation Tracker 💪",
 		dateStr: "December 2022",
 		// add jsx for desciprtion
 		description: ("Tracks and logs the daily, weekly and monthly usage across my college's gyms to find out the best time to go work out!"
@@ -62,11 +75,11 @@ export const projectsData: ProjectItem[] = [
 		},
 		impactPoints: [
 			"Currently scraped more than 100,000 datapoints",
-            "Frontend built using React and Recharts",
+			"Frontend built using React and Recharts",
 		]
 	},
 	{
-		title: "SigLo - Reinvent your input.",
+		title: "SigLo - Reinvent your input. 🖐️",
 		dateStr: "February 2022",
 		description: ("Control your computer using gestures captured by the webcam. Can control arrow keys, horizontal and vertical scrolling, video playback and volume."
 
@@ -78,8 +91,15 @@ export const projectsData: ProjectItem[] = [
 		},
 		impactPoints: [
 			"Won most technically challenging product at HackBeanPot 2022 🏆",
-            "Uses 21 captured landmarks to compute hand position and gesture",
+			"Uses 21 captured landmarks to compute hand position and gesture",
 		]
+	},
+	{
+		title: "Neural Stock Predictor",
+		dateStr: "April 2024",
+		description: "A stock price prediction tool using deep learning to analyze historical data and predict future stock price movements.",
+		techStack: [TechStackItem.pytorch, TechStackItem.streamlit],
+		primaryLink: ""
 	},
 	{
 		title: "Java Image Editor",
@@ -89,10 +109,10 @@ export const projectsData: ProjectItem[] = [
 		techStack: [TechStackItem.java, TechStackItem.swing],
 		primaryLink: "", // Since the code is private and no link was provided
 		links: {},
-        impactPoints: [
-            "Uses MVC architecture for high readability and maintainability",
-            "Supports a GUI and console interface for ease of use and flexibility"
-        ]
+		impactPoints: [
+			"Uses MVC architecture for high readability and maintainability",
+			"Supports a GUI and console interface for ease of use and flexibility"
+		]
 	},
 	{
 		title: "Distributed KV Store",
@@ -107,27 +127,6 @@ export const projectsData: ProjectItem[] = [
 		description: "A minimalist note-taking app that transcribes spoken notes to text using the Web Speech API.",
 		techStack: [TechStackItem.javascript, TechStackItem.html, TechStackItem.css],
 		primaryLink: "https://github.com/JosephSalinas/project-13"
-	},
-	{
-		title: "MNIST Playground",
-		dateStr: "July 2020",
-		description: "Web application for comparing the performance of different machine learning models (MLP and CNN) on the MNIST dataset.",
-		techStack: [TechStackItem.tensorflow, TechStackItem.javascript],
-		primaryLink: "https://github.com/Suraj-Ram/mnist-web-serve"
-	},
-	{
-		title: "Neural Stock Predictor",
-		dateStr: "April 2024",
-		description: "A stock price prediction tool using deep learning to analyze historical data and predict future stock price movements.",
-		techStack: [TechStackItem.pytorch, TechStackItem.streamlit],
-		primaryLink: ""
-	},
-	{
-		title: "BFS/DFS Maze Solver",
-		dateStr: "April 2022",
-		description: "A visualization tool for comparing the performance of BFS and DFS algorithms in solving mazes generated with Prim's algorithm",
-		techStack: [TechStackItem.java],
-		primaryLink: ""
 	},
 	{
 		title: "Portfolio Website",

@@ -4,6 +4,7 @@ import path from "path"
 import { promises as fs } from "fs"
 import * as T from "@/components/Typography"
 import { MDXComponents } from "mdx/types"
+import Image from "next/image"
 
 async function getTextFromFile(filepath: string) {
     // Filepath is relative to project root directory
@@ -21,7 +22,19 @@ const customComponents: MDXComponents = {
     li: (props: any) => <T.ListItem {...props} />,
     strong: (props: any) => <T.Bold {...props} />,
     em: (props: any) => <T.Italics {...props} />,
-    a: (props: any) => <T.LinkWrapper {...props} link={props.href} />
+    a: (props: any) => <T.LinkWrapper {...props} link={props.href} />,
+    Image: (props: any) => <CustomImage {...props} />,
+}
+
+const CustomImage = (props: any) => {
+    // TODO play around with the styling of the image
+    return (
+        <div className="relative flex justify-center items-center border center">
+            {/* <div className=""> */}
+            <Image {...props} objectFit="cover" />
+            {/* </div> */}
+        </div>
+    )
 }
 
 
