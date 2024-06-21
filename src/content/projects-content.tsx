@@ -44,7 +44,7 @@ export const projectsData: ProjectItem[] = [
 		title: "Multi-threaded Web Server 🦀",
 		description: "A lightweight web server written in Rust that serves static files and supports HTTP/1.1. Implements a thread pool for handling multiple requests concurrently.",
 		techStack: [TechStackItem.rust],
-		primaryLink: "",
+		primaryLink: "https://github.com/Suraj-Ram/rust-web-server",
 		impactPoints: [
 			"Implemented a thread pool from scratch",
 			"Supports gzip compression for serving static files",
