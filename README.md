@@ -9,7 +9,8 @@ My portfolio built with Next.js, MDX and TailwindCSS to showcase my experience, 
 - **Styling**: [TailwindCSS](https://tailwindcss.com/)
 - **Deployment**: [Vercel](https://vercel.com/)
 
-The way I manage written content for this site is quite unique. I wanted to an easy way to separate the writing from the intricacies of my React components. I finally settled on using MDX to write my content in markdown and keep it separate from the React components. This was I had the simplicity of not using a CMS or a database and the ease of integration to use it.
+
+The way I manage written content for this site is quite unique. I wanted an easy way to separate the writing from the intricacies of my React components. I finally settled on using MDX to write my content in markdown and keep it separate from the React components. This way, I have the simplicity of not using a CMS or a database and have the ease of integration to actually use it in my site.
 
 At compile time, the MDX content is converted to rich text, passed as a prop to the respective server components (h1, h2, a, p, ...) and the site is built using Next and its static site generation.
 
