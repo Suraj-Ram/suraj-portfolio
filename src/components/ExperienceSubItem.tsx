@@ -11,8 +11,7 @@ export function ExperienceSubItem() {
             {
                 company: "Klaviyo",
                 role: "SWE Intern -- Software Delivery",
-                // date: "July 2024 → Today",
-                date: "Starting in July 2024",
+                date: "July 2024 → December 2024",
                 logo: "/logos/klaviyo_logo.jpeg",
             },
             // {
