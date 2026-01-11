@@ -24,6 +24,7 @@ export enum TechStackItem {
 	grpc = "gRPC",
 	redis = "Redis",
 	milvus = "Milvus",
+	sentenceTransformers = "SentenceTransformers",
 	// ...
 }
 
@@ -42,6 +43,13 @@ export interface ProjectItem {
 }
 
 export const projectsData: ProjectItem[] = [
+	{
+		dateStr: "June 2025",
+		title: "sem_search 🔍",
+		description: "Vector search over local documents with a custom on-disk vector datastore.",
+		techStack: [TechStackItem.sentenceTransformers, TechStackItem.grpc, TechStackItem.redis],
+		primaryLink: "",
+	},
 	{
 		dateStr: "April 2025",
 		title: "Semantic Video Search 🎥",
