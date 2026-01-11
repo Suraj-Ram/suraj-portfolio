@@ -8,7 +8,8 @@ import Image from "next/image"
 
 async function getTextFromFile(filepath: string) {
     // Filepath is relative to project root directory
-    const fileContents = await fs.readFile(filepath)
+    // Read as utf8 so we return a string (not a Buffer) which MDXRemote accepts
+    const fileContents = await fs.readFile(filepath, "utf8")
     return fileContents
 }
 
