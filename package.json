@@ -19,9 +19,9 @@
     "@vercel/analytics": "^1.0.2",
     "autoprefixer": "10.4.14",
     "eslint-config-next": "16.1.1",
-    "lucide-react": "^0.363.0",
+    "lucide-react": "^0.562.0",
     "next": "16.1.1",
-    "next-mdx-remote": "^4.4.1",
+    "next-mdx-remote": "^5.0.0",
     "postcss": "^8.5.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -30,9 +30,9 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
+    "eslint": "^9",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.14",
-    "eslint": "^9"
+    "prettier-plugin-tailwindcss": "^0.5.14"
   },
   "overrides": {
     "@types/react": "19.2.8",
