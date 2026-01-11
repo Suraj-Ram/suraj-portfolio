@@ -11,7 +11,6 @@ export default function Experience() {
                 <ExperienceSubItem />
                 <hr className="my-8" />
 
-                {/* @ts-expect-error Server Component */}
                 <RenderMarkdown source="src/content/Experience.mdx" />
             </div>
         </>

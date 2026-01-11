@@ -61,7 +61,7 @@ export function ExperienceSubItem() {
 									{item.company}
 								</span>
 								<span className="text-md text-slate-700">{item.role}</span>
-                                
+
 								{item.dateRanges.toReversed().map((range) => (
 									<span
 										key={range}

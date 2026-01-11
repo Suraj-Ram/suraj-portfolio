@@ -7,7 +7,6 @@ export default function Projects({ params }: { params: any }) {
   return (
     <div className="py-10">
       <h6 className="text-sm uppercase text-gray-400">Project</h6>
-      {/* @ts-expect-error Server Component */}
       <RenderMarkdown source="src/content/project-pages/faculty-activity-tracker.mdx" />
       {/* <Image src={testImage} alt="test image" /> */}
 
