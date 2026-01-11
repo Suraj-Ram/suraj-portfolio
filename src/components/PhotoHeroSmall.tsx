@@ -32,17 +32,17 @@ export default function PhotoHeroSmall() {
 						Suraj Ramchandran
 					</span>
 					<span className="text-l text-slate-700 font-light">
-						Student & Software Engineer
+						Software Engineer & life-long Student
 					</span>
 					<SocialIconLinks />
 				</div>
 
-				<Image
+				{/* <Image
 					src={headshotPicture}
 					alt="Picture of Suraj"
 					className="order-1 sm:order-2 rounded-full shadow-md transition duration-300 ease-in-out"
 					height={100}
-				></Image>
+				></Image> */}
 			</div>
 		</>
 	);

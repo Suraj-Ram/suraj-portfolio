@@ -17,11 +17,13 @@ export default function Home() {
         {/* @ts-expect-error Server Component */}
         <RenderMarkdown source="src/content/AboutMe.mdx" />
       </div>
-      <SecondaryHeading>Experience</SecondaryHeading>
 
-      <ExperienceSubItem />
-      <SeeMoreLink link="/experience" />
-      <ProjectsParent />
+      {/* <SecondaryHeading>Experience</SecondaryHeading> */}
+      {/* <ExperienceSubItem /> */}
+      {/* <SeeMoreLink link="/experience" /> */}
+
+
+      {/* <ProjectsParent /> */}
     </>
   );
 }
