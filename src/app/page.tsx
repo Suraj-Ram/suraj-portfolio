@@ -14,7 +14,6 @@ export default function Home() {
       <PhotoHeroSmall />
 
       <div className="py-2 lg:py-4">
-        {/* @ts-expect-error Server Component */}
         <RenderMarkdown source="src/content/AboutMe.mdx" />
       </div>
 
