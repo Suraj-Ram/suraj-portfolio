@@ -25,15 +25,16 @@ export default function PhotoHeroSmall() {
 		<>
 			<div className="flex flex-col sm:flex-row justify-between py-2 lg:py-6 items-center">
 				<div className="flex flex-col max-w-xl gap-2 order-2">
-					<span className="text-md text-myGray-400 tracking-wide">
+					{/* <span className="text-md text-myGray-400 tracking-wide">
 						👋 Hi, I'm
-					</span>
+					</span> */}
+					<span className="text-md text-myGray-400 tracking-wide">👋</span>
 					<span className="text-2xl md:text-3xl lg:text-4xl text-main-600 font-extrabold font-accent">
 						Suraj Ramchandran
 					</span>
-					<span className="text-l text-slate-700 font-light">
+					{/* <span className="text-l text-slate-700 font-light">
 						Software Engineer & life-long Student
-					</span>
+					</span> */}
 					<SocialIconLinks />
 				</div>
 
