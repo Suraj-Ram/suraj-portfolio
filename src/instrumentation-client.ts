@@ -1,9 +1,15 @@
-import posthog from 'posthog-js'
+import posthog from "posthog-js";
 
-console.log("env label")
-console.log(process.env.NEXT_PUBLIC_VERCEL_ENV)
+// Will be one of 'production', 'preview', or 'development'
+const vercelEnvironment = process.env.NEXT_PUBLIC_VERCEL_ENV;
 
 posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
-  api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
-  defaults: '2025-11-30'
+	api_host: "/hog_ingest",
+	ui_host: "https://us.posthog.com",
+	defaults: "2025-11-30",
+	loaded: (posthog) => {
+		posthog.register({
+			environment: vercelEnvironment,
+		});
+	},
 });
