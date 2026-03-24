@@ -10,6 +10,10 @@ const nextConfig = {
         source: '/hog_ingest/:path*',
         destination: 'https://us.i.posthog.com/:path*',
       },
+      {
+        source: '/resume',
+        destination: '/resume.pdf',
+      }
     ]
   },
   skipTrailingSlashRedirect: true,
