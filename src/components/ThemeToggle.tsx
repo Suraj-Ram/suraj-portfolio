@@ -2,17 +2,12 @@
 
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
 	const { resolvedTheme, setTheme } = useTheme();
-	const [mounted, setMounted] = useState(false);
 
-	useEffect(() => {
-		setMounted(true);
-	}, []);
-
-	if (!mounted) {
+	// resolvedTheme is undefined until the client theme is available
+	if (!resolvedTheme) {
 		return (
 			<button
 				type="button"
