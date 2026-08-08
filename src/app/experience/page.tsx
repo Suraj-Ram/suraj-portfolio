@@ -9,7 +9,7 @@ export default function Experience() {
             <div className="py-10">
                 <SecondaryHeading>Experience</SecondaryHeading>
                 <ExperienceSubItem />
-                <hr className="my-8" />
+                <hr className="my-8 border-slate-200 dark:border-slate-700" />
 
                 <RenderMarkdown source="src/content/Experience.mdx" />
             </div>

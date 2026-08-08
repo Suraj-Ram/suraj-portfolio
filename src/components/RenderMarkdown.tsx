@@ -44,7 +44,7 @@ export default async function RenderMarkdown({ source }: { source: string }) {
 
     return (
         // Use prose to add default styling to elements without a custom component
-        <article className="max-w-none prose">
+        <article className="prose max-w-none dark:prose-invert">
             <MDXRemote source={markdownContent} components={customComponents} />
         </article>
     )

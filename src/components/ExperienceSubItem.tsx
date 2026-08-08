@@ -42,11 +42,11 @@ export function ExperienceSubItem() {
 
 	return (
 		<>
-			<div className="divide-y divide-slate-200">
+			<div className="divide-y divide-slate-200 dark:divide-slate-700">
 				{experience_data.map((item) => {
 					return (
 						<div
-							className="flex gap-4 py-3 first:pt-2 md:py-6 last:pb-2"
+							className="flex gap-4 py-3 first:pt-2 last:pb-2 md:py-6"
 							key={item.logo}
 						>
 							<Image
@@ -57,15 +57,15 @@ export function ExperienceSubItem() {
 								className="h-14 w-14 rounded-xl shadow-md"
 							/>
 							<div className="col-span-9 flex flex-col">
-								<span className="text-l font-semibold text-slate-800">
+								<span className="text-l font-semibold text-slate-800 dark:text-slate-100">
 									{item.company}
 								</span>
-								<span className="text-md text-slate-700">{item.role}</span>
+								<span className="text-md text-slate-700 dark:text-slate-300">{item.role}</span>
 
 								{item.dateRanges.toReversed().map((range) => (
 									<span
 										key={range}
-										className="col-span-2 mt-2 block font-mono text-sm font-medium tracking-tighter text-slate-500"
+										className="col-span-2 mt-2 block font-mono text-sm font-medium tracking-tighter text-slate-500 dark:text-slate-400"
 									>
 										{range}
 									</span>

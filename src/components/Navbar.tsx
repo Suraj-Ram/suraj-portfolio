@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import NavCluster from "./NavCluster";
+import ThemeToggle from "./ThemeToggle";
 import Link from "next/link";
 
 const navLinks = [
@@ -23,7 +23,7 @@ function LinkItem({ name, link, active }: { name: string; link: string, active: 
 	return (
 		<a
 			href={link}
-			className={`px-2 hover:text-main-600 text-sm font-bold ${active ? "text-main-600" : "text-gray-600"}`}
+			className={`px-2 text-sm font-bold hover:text-main-600 dark:hover:text-main-400 ${active ? "text-main-600 dark:text-main-400" : "text-gray-600 dark:text-slate-400"}`}
 		>
 			{name}
 		</a>
@@ -33,7 +33,7 @@ function LinkItem({ name, link, active }: { name: string; link: string, active: 
 function LogoLink({invisible}: {invisible: boolean}) {
     return (
         <Link href="/">
-            <h1 className={`font-mono text-sm font-bold hover:text-main-600 ${invisible ? "invisible": ""}`}>Suraj Ramchandran</h1>
+            <h1 className={`font-mono text-sm font-bold hover:text-main-600 dark:hover:text-main-400 ${invisible ? "invisible": ""}`}>Suraj Ramchandran</h1>
         </Link>
     )
 }
@@ -50,10 +50,13 @@ export default function Navbar() {
 				<LogoLink invisible={loc === "/"} />
 			</div>
 			{/* Nav bar */}
-			<div className="flex justify-center items-center font-mono">
+			<div className="flex items-center justify-center font-mono">
 				{navLinks.map((navLink) => {
 					return <LinkItem key={navLink.name} name={navLink.name} link={navLink.link} active={loc === navLink.link}/>;
 				})}
+				<div className="ml-2 border-l border-myGray-200 pl-2 dark:border-slate-700">
+					<ThemeToggle />
+				</div>
 			</div>
 		</div>
 	);
