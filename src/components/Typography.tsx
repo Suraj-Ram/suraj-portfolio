@@ -27,20 +27,20 @@ export function SecondaryHeading({ children }: { children: React.ReactNode }) {
 
 export function Heading3({ children }: { children: React.ReactNode }) {
     return (
-        <h3 className="my-1 text-xl md:text-xl lg:mt-3 lg:text-2xl">{children}</h3>
+        <h3 className="my-1 text-xl text-slate-900 dark:text-white md:text-xl lg:mt-3 lg:text-2xl">{children}</h3>
     );
 }
 
 export function Heading4({ children }: { children: React.ReactNode }) {
     return (
-        <h4 className="my-1 text-lg md:text-xl lg:mt-3 lg:text-xl">{children}</h4>
+        <h4 className="my-1 text-lg text-slate-900 dark:text-white md:text-xl lg:mt-3 lg:text-xl">{children}</h4>
     );
 }
 
 
 export function UnorderedList({ children }: { children: React.ReactNode }) {
     return (
-        <ul className="mb-2 list-outside list-disc space-y-1 text-md tracking-wide md:space-y-2">
+        <ul className="mb-2 list-outside list-disc space-y-1 text-md tracking-wide text-slate-700 dark:text-slate-200 md:space-y-2">
             {children}
         </ul>
     );
@@ -77,17 +77,17 @@ export function LinkWrapper({ children, link }: { children: React.ReactNode, lin
 }
 
 export function Bold({ children }: { children: React.ReactNode }) {
-    return <span className="font-bold tracking-wide">{children}</span>
+    return <span className="font-bold tracking-wide text-slate-900 dark:text-white">{children}</span>
 }
 
 export function Italics({ children }: { children: React.ReactNode }) {
-    return <span className="italic text-myGray-500 dark:text-slate-400">{children}</span>
+    return <span className="italic text-slate-500 dark:text-slate-300">{children}</span>
 }
 
 export function Date({ children }: { children: React.ReactNode }) {
-    return <p className="mb-2 mt-1 text-sm font-light tracking-wide text-myGray-500 dark:text-slate-400">{children}</p>
+    return <p className="mb-2 mt-1 text-sm font-medium tracking-wide text-slate-500 dark:text-slate-300">{children}</p>
 }
 
 export function Divider() {
-    return <div className="my-4 border-t border-myGray-200 dark:border-slate-700"></div>
+    return <div className="my-4 border-t border-slate-200 dark:border-slate-600"></div>
 }
