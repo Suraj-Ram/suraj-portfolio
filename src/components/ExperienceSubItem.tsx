@@ -36,18 +36,18 @@ export function ExperienceSubItem() {
 							alt={`${item.company} logo`}
 							className="h-14 w-14 rounded-xl bg-white shadow-sm ring-1 ring-slate-200 dark:ring-slate-700"
 						/>
-						<div className="flex flex-col gap-0.5">
+						<div className="flex min-w-0 flex-col gap-0.5">
 							<span className="text-base font-semibold tracking-tight text-slate-900 dark:text-white">
 								{item.company}
 							</span>
-							<span className="text-sm text-slate-700 dark:text-slate-200 md:text-base">
+							<span className="text-sm text-slate-600 dark:text-slate-200 md:text-base">
 								{item.role}
 							</span>
 
 							{item.dateRanges.toReversed().map((range) => (
 								<span
 									key={range}
-									className="mt-1.5 block font-mono text-sm font-medium tracking-tight text-slate-500 dark:text-slate-300"
+									className="mt-1.5 block font-mono text-sm font-medium tracking-tight text-slate-500 dark:text-slate-200"
 								>
 									{range}
 								</span>
