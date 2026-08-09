@@ -5,9 +5,9 @@ export default function NextPage({ stub, name }: { stub: string, name: string}) 
 	return (
 		<div className="flex justify-end font-semibold">
 			<span
-				className="flex items-center gap-1 justify-center 
-                            border border-myGray-200 text-main-600 p-3 rounded-md
-                            hover:underline cursor-pointer"
+				className="flex cursor-pointer items-center justify-center gap-1 
+                            rounded-md border border-myGray-200 p-3 text-main-600
+                            hover:underline dark:border-slate-700 dark:text-main-400"
 			>
 				<Link href={stub}>{name}</Link>
 				<RightArrow className="h-4" />

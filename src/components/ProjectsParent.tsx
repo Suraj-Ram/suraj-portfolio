@@ -14,12 +14,12 @@ const Step = ({
 }) => {
 	return (
 		<li className="">
-			<div className="flex items-center mb-2">
+			<div className="mb-2 flex items-center">
 				<span className="sr-only">Check</span>
 				<BadgeCheckIcon
 					fill="#3B82F6"
 					height={"1.2rem"}
-					className="text-white mr-1"
+					className="mr-1 text-white dark:text-slate-950"
 				/>
 
 				<p className="">{title}</p>
@@ -53,29 +53,29 @@ export function ProjectCard({
 }: ProjectCardProps) {
 	function InnerProjectCard() {
 		return (
-			<div className="rounded-lg border border-gray-200 flex items-center cursor-pointer hover:border-gray-400">
-				<div className="p-4 flex-1">
+			<div className="flex cursor-pointer items-center rounded-lg border border-gray-200 hover:border-gray-400 dark:border-slate-700 dark:hover:border-slate-500">
+				<div className="flex-1 p-4">
 
-					<span className="text-gray-500 text-sm uppercase font-light">
+					<span className="text-sm font-light uppercase text-gray-500 dark:text-slate-400">
 						{dateStr}
 					</span>
 					<h2 className="text-xl font-semibold">{title}</h2>
 
 					{techStack && techStack.length > 0 && (
-						<p className="text-sm text-blue-600 font-medium mt-1 mb-2">
+						<p className="mt-1 mb-2 text-sm font-medium text-blue-600 dark:text-blue-400">
 							{techStack.join(" | ")}
 						</p>
 					)}
-					<p className="text-gray-500 text-md">{description}</p>
+					<p className="text-md text-gray-500 dark:text-slate-400">{description}</p>
 					{/* Render out impact points as an unordered list with an icon as the bullet point */}
 					{impactPoints && impactPoints.length > 0 && (
-						<ul className="text-gray-600 text-md mt-2">
+						<ul className="text-md mt-2 text-gray-600 dark:text-slate-300">
 							{impactPoints?.map((point, i) => <Step key={i} title={point} />)}
 						</ul>
 					)}
 				</div>
 				<ChevronRight
-					className={`text-myGray-600 mr-3 ${!primaryLink && "invisible"}`}
+					className={`mr-3 text-myGray-600 dark:text-slate-400 ${!primaryLink && "invisible"}`}
 				/>
 			</div>
 		);

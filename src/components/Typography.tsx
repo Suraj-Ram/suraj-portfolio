@@ -3,11 +3,11 @@ import Link from "next/link";
 export function PrimaryHeading({ children }: { children: React.ReactNode }) {
     return (
         <div className="flex">
-            <div className="flex items-center w-full md:mb-3 lg:mb-6 mt-3 lg:mt-6">
-                <span className="flex-shrink mr-4 font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight">
+            <div className="mt-3 flex w-full items-center md:mb-3 lg:mb-6 lg:mt-6">
+                <span className="mr-4 flex-shrink text-2xl font-bold tracking-tight md:text-3xl lg:text-4xl">
                     {children}
                 </span>
-                <div className="flex-grow border-t border-myGray-200"></div>
+                <div className="flex-grow border-t border-myGray-200 dark:border-slate-700"></div>
             </div>
         </div>
     )
@@ -15,9 +15,9 @@ export function PrimaryHeading({ children }: { children: React.ReactNode }) {
 
 export function SecondaryHeading({ children }: { children: React.ReactNode }) {
     return (
-        <div className="flex mb-2 mt-1 md:mb-5 md:mt-3">
-            <div className="flex items-center w-full mt-2 ">
-                <span className="flex-shrink mr-4 font-semibold text-2xl md:text-3xl tracking-tight text-black font-accent">
+        <div className="mb-2 mt-1 flex md:mb-5 md:mt-3">
+            <div className="mt-2 flex w-full items-center ">
+                <span className="mr-4 flex-shrink font-accent text-2xl font-semibold tracking-tight text-black dark:text-white md:text-3xl">
                     {children}
                 </span>
             </div>
@@ -27,20 +27,20 @@ export function SecondaryHeading({ children }: { children: React.ReactNode }) {
 
 export function Heading3({ children }: { children: React.ReactNode }) {
     return (
-        <h3 className="text-xl md:text-xl lg:text-2xl my-1 lg:mt-3">{children}</h3>
+        <h3 className="mb-1 mt-6 text-xl font-semibold text-slate-900 dark:text-white md:text-xl lg:mt-8 lg:text-2xl">{children}</h3>
     );
 }
 
 export function Heading4({ children }: { children: React.ReactNode }) {
     return (
-        <h4 className="text-lg md:text-xl lg:text-xl my-1 lg:mt-3">{children}</h4>
+        <h4 className="mb-0.5 mt-5 text-lg font-semibold text-slate-900 dark:text-white md:text-xl lg:mt-6 lg:text-xl">{children}</h4>
     );
 }
 
 
 export function UnorderedList({ children }: { children: React.ReactNode }) {
     return (
-        <ul className="space-y-1 md:space-y-2 list-disc list-outside text-md tracking-wide mb-2">
+        <ul className="mb-4 list-outside list-disc space-y-1.5 text-md tracking-wide text-slate-700 dark:text-slate-200 md:space-y-2">
             {children}
         </ul>
     );
@@ -53,7 +53,7 @@ export function ListItem({ children }: { children: React.ReactNode }) {
 export function LinkWrapper({ children, link }: { children: React.ReactNode, link: string }) {
     // Check if internal link or external link and return the appropriate component
 
-    const baseClass = "underline hover:text-main-600 cursor-pointer"
+    const baseClass = "underline cursor-pointer text-main-600 hover:text-main-700 dark:text-main-400 dark:hover:text-main-300"
 
     function InternalLink() {
         return <Link href={link} className={baseClass}>{children}</Link>
@@ -77,18 +77,17 @@ export function LinkWrapper({ children, link }: { children: React.ReactNode, lin
 }
 
 export function Bold({ children }: { children: React.ReactNode }) {
-    return <span className="font-bold tracking-wide">{children}</span>
+    return <span className="font-bold tracking-wide text-slate-900 dark:text-white">{children}</span>
 }
 
 export function Italics({ children }: { children: React.ReactNode }) {
-    return <span className="italic text-myGray-500">{children}</span>
+    return <span className="italic text-slate-500 dark:text-slate-200">{children}</span>
 }
 
 export function Date({ children }: { children: React.ReactNode }) {
-    return <p className="tracking-wide text-sm font-light text-myGray-500 mb-2 mt-1">{children}</p>
+    return <p className="mb-2 mt-1 font-mono text-sm font-medium tracking-tight text-slate-500 dark:text-slate-200">{children}</p>
 }
 
 export function Divider() {
-    return <div className="border-t border-myGray-200 my-4"></div>
+    return <div className="my-4 border-t border-slate-200 dark:border-slate-600"></div>
 }
-

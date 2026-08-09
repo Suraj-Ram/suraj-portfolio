@@ -5,7 +5,7 @@ import { Linkedin, Github, FileBadge } from "lucide-react";
 
 function SocialIconLinks() {
 	return (
-		<div className="flex text-myGray-400 space-x-3 py-4">
+		<div className="flex space-x-3 py-4 text-myGray-400 dark:text-slate-400">
 			<LinkWrapper link={"https://www.linkedin.com/in/surajramchandran/"}>
 				<Linkedin />
 			</LinkWrapper>
@@ -23,13 +23,13 @@ export default function PhotoHeroSmall() {
 	// TODO make this whole component friendly on mobile
 	return (
 		<>
-			<div className="flex flex-col sm:flex-row justify-between py-2 lg:py-6 items-center">
-				<div className="flex flex-col max-w-xl gap-2 order-2">
+			<div className="flex flex-col items-center justify-between py-2 sm:flex-row lg:py-6">
+				<div className="order-2 flex max-w-xl flex-col gap-2">
 					{/* <span className="text-md text-myGray-400 tracking-wide">
 						👋 Hi, I'm
 					</span> */}
-					<span className="text-md text-myGray-400 tracking-wide">👋</span>
-					<span className="text-2xl md:text-3xl lg:text-4xl text-main-600 font-extrabold font-accent">
+					<span className="text-md tracking-wide text-myGray-400 dark:text-slate-400">👋</span>
+					<span className="font-accent text-2xl font-extrabold text-main-600 dark:text-main-400 md:text-3xl lg:text-4xl">
 						Suraj Ramchandran
 					</span>
 					{/* <span className="text-l text-slate-700 font-light">
