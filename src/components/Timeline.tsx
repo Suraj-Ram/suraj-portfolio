@@ -20,7 +20,7 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
 }) => {
 	return (
 		<li className="mb-10 ms-4">
-			<div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-slate-200 dark:border-slate-900 dark:bg-slate-700"></div>
+			<div className="absolute -inset-s-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-slate-200 dark:border-slate-900 dark:bg-slate-700"></div>
 			<time className="mb-1 text-sm font-normal leading-none text-slate-400 dark:text-slate-500">
 				{date}
 			</time>

@@ -4,10 +4,10 @@ export function PrimaryHeading({ children }: { children: React.ReactNode }) {
     return (
         <div className="flex">
             <div className="flex items-center w-full md:mb-3 lg:mb-6 mt-3 lg:mt-6">
-                <span className="flex-shrink mr-4 font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight">
+                <span className="shrink mr-4 font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight">
                     {children}
                 </span>
-                <div className="flex-grow border-t border-myGray-200"></div>
+                <div className="grow border-t border-myGray-200"></div>
             </div>
         </div>
     )
@@ -17,7 +17,7 @@ export function SecondaryHeading({ children }: { children: React.ReactNode }) {
     return (
         <div className="flex mb-2 mt-1 md:mb-5 md:mt-3">
             <div className="flex items-center w-full mt-2 ">
-                <span className="flex-shrink mr-4 font-semibold text-2xl md:text-3xl tracking-tight text-black font-accent">
+                <span className="shrink mr-4 font-semibold text-2xl md:text-3xl tracking-tight text-black font-accent">
                     {children}
                 </span>
             </div>
@@ -52,28 +52,22 @@ export function ListItem({ children }: { children: React.ReactNode }) {
 
 export function LinkWrapper({ children, link }: { children: React.ReactNode, link: string }) {
     // Check if internal link or external link and return the appropriate component
-
     const baseClass = "underline hover:text-main-600 cursor-pointer"
 
-    function InternalLink() {
-        return <Link href={link} className={baseClass}>{children}</Link>
+    if (link.slice(0, 4) === "http") {
+        return (
+            <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={baseClass}
+            >
+                {children}
+            </a>
+        )
     }
 
-    function ExternalLink() {
-        return (<a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={baseClass}
-        >
-            {children}
-        </a>)
-
-    }
-
-    return (
-        link.slice(0, 4) === "http" ? <ExternalLink /> : <InternalLink />
-    )
+    return <Link href={link} className={baseClass}>{children}</Link>
 }
 
 export function Bold({ children }: { children: React.ReactNode }) {

@@ -27,7 +27,7 @@ export default function PhotoHero() {
 		<>
 			<div className="flex flex-col md:flex-row justify-between md:mx-4 mb-10 items-center">
 				<div className="flex flex-col max-w-xl gap-2 order-2">
-					<span className="text-lg text-myGray-400 ">Hi, I'm 👋</span>
+					<span className="text-lg text-myGray-400 ">Hi, I&apos;m 👋</span>
 					<Name />
 
 					<span className="text-lg text-myGray-700 text-">

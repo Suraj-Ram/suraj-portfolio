@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
@@ -26,3 +24,83 @@ body {
     )
     rgb(var(--background-start-rgb));
 }  */
+
+@plugin '@tailwindcss/typography';
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-accent: var(--font-playfair-display);
+  --font-mono: var(--font-roboto-mono);
+
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+
+  --color-main-50: #eff6ff;
+  --color-main-100: #dbeafe;
+  --color-main-200: #bfdbfe;
+  --color-main-300: #93c5fd;
+  --color-main-400: #60a5fa;
+  --color-main-500: #3b82f6;
+  --color-main-600: #2563eb;
+  --color-main-700: #1d4ed8;
+  --color-main-800: #1e40af;
+  --color-main-900: #1e3a8a;
+  --color-main-950: #172554;
+
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+  --color-blue-950: #172554;
+
+  --color-myGray-50: #f8fafc;
+  --color-myGray-100: #f1f5f9;
+  --color-myGray-200: #e2e8f0;
+  --color-myGray-300: #cbd5e1;
+  --color-myGray-400: #94a3b8;
+  --color-myGray-500: #64748b;
+  --color-myGray-600: #475569;
+  --color-myGray-700: #334155;
+  --color-myGray-800: #1e293b;
+  --color-myGray-900: #0f172a;
+  --color-myGray-950: #020617;
+
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import headshotPicture from "../assets/headshot.jpg";
 import { LinkWrapper } from "./Typography";
-import { Linkedin, Github, FileBadge } from "lucide-react";
+import { FileBadge } from "lucide-react";
+import { Linkedin, Github } from "lucide-brands";
 
 function SocialIconLinks() {
 	return (
