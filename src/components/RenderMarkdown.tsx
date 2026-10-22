@@ -1,10 +1,10 @@
 // Uses the React Server Components variant, so a lot of code can be omitted
 import { MDXRemote } from "next-mdx-remote/rsc"
-import path from "path"
 import { promises as fs } from "fs"
 import * as T from "@/components/Typography"
 import { MDXComponents } from "mdx/types"
-import Image from "next/image"
+import Image, { ImageProps } from "next/image"
+import type { ReactNode } from "react"
 
 async function getTextFromFile(filepath: string) {
     // Filepath is relative to project root directory
@@ -13,31 +13,30 @@ async function getTextFromFile(filepath: string) {
     return fileContents
 }
 
-const customComponents: MDXComponents = {
-    h1: (props: any) => <T.PrimaryHeading {...props} />,
-    h2: (props: any) => <T.SecondaryHeading {...props} />,
-    h3: (props: any) => <T.Heading3 {...props} />,
-    h4: (props: any) => <T.Heading4 {...props} />,
-    h6: (props: any) => <T.Date {...props} />,
-    ul: (props: any) => <T.UnorderedList {...props} />,
-    li: (props: any) => <T.ListItem {...props} />,
-    strong: (props: any) => <T.Bold {...props} />,
-    em: (props: any) => <T.Italics {...props} />,
-    a: (props: any) => <T.LinkWrapper {...props} link={props.href} />,
-    Image: (props: any) => <CustomImage {...props} />,
-}
-
-const CustomImage = (props: any) => {
+const CustomImage = (props: ImageProps) => {
     // TODO play around with the styling of the image
     return (
         <div className="relative flex justify-center items-center border center">
-            {/* <div className=""> */}
-            <Image {...props} objectFit="cover" />
-            {/* </div> */}
+            <Image {...props} alt={props.alt ?? ""} style={{ objectFit: "cover" }} />
         </div>
     )
 }
 
+const customComponents: MDXComponents = {
+    h1: ({ children }: { children?: ReactNode }) => <T.PrimaryHeading>{children}</T.PrimaryHeading>,
+    h2: ({ children }: { children?: ReactNode }) => <T.SecondaryHeading>{children}</T.SecondaryHeading>,
+    h3: ({ children }: { children?: ReactNode }) => <T.Heading3>{children}</T.Heading3>,
+    h4: ({ children }: { children?: ReactNode }) => <T.Heading4>{children}</T.Heading4>,
+    h6: ({ children }: { children?: ReactNode }) => <T.Date>{children}</T.Date>,
+    ul: ({ children }: { children?: ReactNode }) => <T.UnorderedList>{children}</T.UnorderedList>,
+    li: ({ children }: { children?: ReactNode }) => <T.ListItem>{children}</T.ListItem>,
+    strong: ({ children }: { children?: ReactNode }) => <T.Bold>{children}</T.Bold>,
+    em: ({ children }: { children?: ReactNode }) => <T.Italics>{children}</T.Italics>,
+    a: ({ children, href }: { children?: ReactNode; href?: string }) => (
+        <T.LinkWrapper link={href ?? ""}>{children}</T.LinkWrapper>
+    ),
+    Image: CustomImage,
+}
 
 export default async function RenderMarkdown({ source }: { source: string }) {
     const markdownContent = await getTextFromFile(source)
@@ -48,6 +47,4 @@ export default async function RenderMarkdown({ source }: { source: string }) {
             <MDXRemote source={markdownContent} components={customComponents} />
         </article>
     )
-
-
 }
